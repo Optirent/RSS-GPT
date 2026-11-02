@@ -6,6 +6,8 @@ on:
     paths:
       - 'config.ini'
       - 'main.py'
+      - 'optirent_filter.py'
+      - 'test_optirent_filter.py'
       - '.github/workflows/cron-job.yml'
   schedule:
     - cron: '0 5 * * *'
