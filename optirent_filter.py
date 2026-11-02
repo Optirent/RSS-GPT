@@ -28,7 +28,7 @@ UNRELATED_TRADES = re.compile(
     r"\bvorbereitende[nr]?\s+maßnahmen\b|"
     r"\babbruch\s*/\s*schadstoffsanierung\b|"
     r"\b(?:lieferung|montage)\s+(?:und\s+montage\s+)?inventar\b|"
-    r"\barchitektenleistungen?\b|"
+    r"\barchitektenleistung(?:en)?\b|"
     r"\bbaulogistik\b|"
     r"\ballgemeine\s+baustelleneinrichtung\b"
     r")",
