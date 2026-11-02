@@ -9,6 +9,7 @@ import re
 import datetime
 import requests
 from fake_useragent import UserAgent
+from optirent_filter import canonical_key, deduplicate_active, keep_entry
 #from dateutil.parser import parse
 
 def get_cfg(sec, name, default=None):
@@ -225,7 +226,15 @@ def output(sec, language):
     else:
         max_items = int(max_items)
     cnt = 0
-    existing_entries = read_entry_from_file(sec)
+    now = datetime.datetime.now(datetime.timezone.utc)
+    existing_entries = deduplicate_active(read_entry_from_file(sec), now=now)
+    known_keys = {canonical_key(entry) for entry in existing_entries}
+    header_feed = feedparser.parse(
+        '<rss version="2.0"><channel>'
+        '<title>OPTIRENT - Aktuelle Ausschreibungen</title>'
+        '<link>https://www.service.bund.de/ausschreibungen</link>'
+        '</channel></rss>'
+    )
     with open(log_file, 'a') as f:
         f.write('------------------------------------------------------\n')
         f.write(f'Started: {datetime.datetime.now()}\n')
@@ -244,20 +253,15 @@ def output(sec, language):
             with open(log_file, 'a') as f:
                 f.write(f"Fetch failed from {rss_url}\n")
             continue
+        header_feed = feed
         for entry in feed.entries:
             if cnt > max_entries:
                 with open(log_file, 'a') as f:
                     f.write(f"Skip from: [{entry.title}]({entry.link})\n")
                 break
 
-            if entry.link.find('#replay') and entry.link.find('v2ex'):
+            if entry.get('link'):
                 entry.link = entry.link.split('#')[0]
-
-            if entry.link in [x.link for x in existing_entries]:
-                continue
-
-            if entry.link in [x.link for x in append_entries]:
-                continue
 
             entry.title = generate_untitled(entry)
 
@@ -266,6 +270,18 @@ def output(sec, language):
             except:
                 try: entry.article = entry.description
                 except: entry.article = entry.title
+
+            accepted, reason = keep_entry(entry, now=now)
+            if not accepted:
+                with open(log_file, 'a') as f:
+                    f.write(f"Excluded ({reason}): [{entry.title}]({entry.link})\n")
+                continue
+
+            key = canonical_key(entry)
+            if not key or key in known_keys:
+                with open(log_file, 'a') as f:
+                    f.write(f"Duplicate or missing notice ID: [{entry.title}]({entry.link})\n")
+                continue
 
             cleaned_article = clean_html(entry.article)
 
@@ -281,6 +297,7 @@ def output(sec, language):
 #            if 'published' in entry:
 #                entry.published = parse(entry.published).strftime('%a, %d %b %Y %H:%M:%S %z')
 
+            known_keys.add(key)
             cnt += 1
             if cnt > max_items:
                 entry.summary = None
@@ -325,7 +342,7 @@ def output(sec, language):
     template = Template(open('template.xml').read())
     
     try:
-        rss = template.render(feed=feed, append_entries=append_entries, existing_entries=existing_entries)
+        rss = template.render(feed=header_feed, append_entries=append_entries, existing_entries=existing_entries)
         with open(out_dir + '.xml', 'w') as f:
             f.write(rss)
         with open(log_file, 'a') as f:
