@@ -12,8 +12,7 @@
 {% if entry.summary %}<div> {{ entry.summary}} <div>{% endif %}
 {{ entry.article }}
 ]]></content:encoded>
-{% if entry.published %}<pubDate>{{ entry.published }}</pubDate>{% endif %}
-{% if entry.updated %}<pubDate>{{ entry.updated }}</pubDate>{% endif %}
+{% if entry.published %}<pubDate>{{ entry.published }}</pubDate>{% elif entry.updated %}<pubDate>{{ entry.updated }}</pubDate>{% endif %}
 </item>{% endfor %}
 {% for entry in existing_entries %}
 <item>
