@@ -52,11 +52,4 @@
 
 <a href="https://www.buymeacoffee.com/yinan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-- https://brett.trpstra.net/brettterpstra -> https://yinan-c.github.io/RSS-GPT/brett-terpstra.xml
-- https://meta.appinn.net/tag/chrome.rss, https://meta.appinn.net/tag/ios.rss, https://meta.appinn.net/tag/macos.rss -> https://yinan-c.github.io/RSS-GPT/appinn.xml
-- https://rknight.me/feed.xml -> https://yinan-c.github.io/RSS-GPT/robb-knight.xml
-- https://stephanango.com/feed.xml -> https://yinan-c.github.io/RSS-GPT/steph-ango.xml
-- https://lopespm.com/atom.xml -> https://yinan-c.github.io/RSS-GPT/byte-tank.xml
-- https://rsshub.app/paulgraham/articles -> https://yinan-c.github.io/RSS-GPT/paul-graham.xml
-- https://nesslabs.com/feed -> https://yinan-c.github.io/RSS-GPT/ness-labs.xml
-- https://manuelmoreale.com/feed/rss -> https://yinan-c.github.io/RSS-GPT/manuel-moreale.xml
+- https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Mietcontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true -> https://Optirent.github.io/RSS-GPT/optirent-ausschreibungen.xml
