@@ -2,6 +2,11 @@ name: OPTIRENT RSS-Feed
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'config.ini'
+      - 'main.py'
+      - '.github/workflows/cron-job.yml'
   schedule:
     - cron: '0 7 * * *'
 
@@ -16,7 +21,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       - name: Install dependencies
