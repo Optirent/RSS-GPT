@@ -10,6 +10,10 @@ on:
   schedule:
     - cron: '0 5 * * *'
 
+concurrency:
+  group: optirent-rss-refresh
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -26,6 +30,8 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Run OPTIRENT filter tests
+        run: python -m unittest test_optirent_filter.py -v
       - name: Build OPTIRENT RSS
         env:
           U_NAME: Optirent
@@ -37,5 +43,6 @@ jobs:
           git add docs/ README.md README-zh.md
           if ! git diff --cached --quiet; then
             git commit -m "Update OPTIRENT RSS"
+            git pull --rebase origin main
             git push
           fi
