@@ -6,7 +6,7 @@ keeping ambiguous notices for later manual review rather than losing bids.
 from datetime import datetime
 from html import unescape
 import re
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
@@ -71,7 +71,12 @@ def canonical_key(entry):
         return ""
     parts = urlsplit(link)
     path = re.sub(r"/subreport15/", "/subreport/", parts.path, flags=re.IGNORECASE)
-    return urlunsplit((parts.scheme.lower(), parts.netloc.lower(), path, "", ""))
+    # service.bund identifies notices in the path; other portals often use query IDs.
+    query = ""
+    if not (parts.hostname or "").lower().endswith("service.bund.de"):
+        query = urlencode(sorted((k,v) for k,v in parse_qsl(parts.query,keep_blank_values=True)
+                                 if not k.lower().startswith("utm_") and k.lower() not in ("fbclid","gclid")))
+    return urlunsplit((parts.scheme.lower(), parts.netloc.lower(), path, query, ""))
 
 
 def keep_entry(entry, now=None):

@@ -6,8 +6,11 @@ on:
     paths:
       - 'config.ini'
       - 'main.py'
+      - 'radar.py'
+      - 'oeffentlichevergabe.py'
       - 'optirent_filter.py'
-      - 'test_optirent_filter.py'
+      - 'test_*.py'
+      - 'requirements.txt'
       - '.github/workflows/cron-job.yml'
   schedule:
     - cron: '0 5 * * *'
@@ -18,11 +21,12 @@ concurrency:
 
 permissions:
   contents: write
+  pages: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -33,18 +37,40 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run OPTIRENT filter tests
-        run: python -m unittest test_optirent_filter.py -v
+        run: python -m unittest discover -p 'test_*.py' -v
       - name: Build OPTIRENT RSS
         env:
           U_NAME: Optirent
-        run: python main.py
+        run: python radar.py
       - name: Save generated RSS files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/ README.md README-zh.md
+          git add docs/ data/radar-state.json
           if ! git diff --cached --quiet; then
             git commit -m "Update OPTIRENT RSS"
             git pull --rebase origin main
             git push
           fi
+      - name: Publish and verify GitHub Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          expected_commit=$(git rev-parse HEAD)
+          gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+          for attempt in $(seq 1 60); do
+            build=$(gh api "repos/$GITHUB_REPOSITORY/pages/builds/latest")
+            build_commit=$(echo "$build" | jq -r .commit)
+            build_status=$(echo "$build" | jq -r .status)
+            if [ "$build_commit" = "$expected_commit" ] && [ "$build_status" = "built" ]; then
+              echo "Published $expected_commit"
+              exit 0
+            fi
+            if [ "$build_commit" = "$expected_commit" ] && [ "$build_status" = "errored" ]; then
+              echo "$build" | jq .error
+              exit 1
+            fi
+            sleep 5
+          done
+          echo "Pages publication was not confirmed within five minutes."
+          exit 1
