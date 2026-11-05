@@ -404,3 +404,92 @@ Fetch error: 502
 Fetch failed from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=mobile%20Raumeinheiten&sortOrder=dateOfIssue_dt+desc&jobsrss=true
 append_entries: 0
 Finish: 2026-11-04 05:50:26.295794
+------------------------------------------------------
+Started: 2026-11-05 05:52:48.324895
+Existing_entries: 11
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Containeranlage&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Excluded (no parseable bid/participation deadline): [K2 - Neubau Aerosolcontainer am Wäldchen](https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/BGE-Bundesgesellschaft-fuer-Endlagerung-mbH/2026/11/6688399.html)
+Append: [Westend-Realschule Plus - Lieferung und Montage einer Containeranlage für zwei Unterrichtsräume](https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a13d184c-239cde9d5f6a243e.html)
+Append: [Kläranlage Stadt Parsberg - Erneuerung BHKW und Heizung; Gewerk: BHKW-Container](https://www.service.bund.de/IMPORTE/Ausschreibungen/aumass/2026/11/AV28F211.html)
+Excluded (separately tendered ancillary trade): [MSS - Minna-Specht-Schule; Erd-, Kanal- und Betonarbeiten (Fertigteilfundamente) - Gründung für eine temporäre Containeranlage](https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/10/54321-Tender-1a13f983470-1f3edd4739aeb313.html)
+Excluded (separately tendered ancillary trade): [Neubau Containeranlage zum Hortbetrieb, E,-André-Str. 51, 18069 Rostock - Los 9b Sonnenschutzfolie](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport15/2026/10/E61872468.html)
+Excluded (separately tendered ancillary trade): [Neubau Containeranlage zum Hortbetrieb, E,-André-Str. 51, 18069 Rostock - Los 9b Sonnenschutzfolie](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/10/E61872468.html)
+Excluded (separately tendered ancillary trade): [Grundschule Wunderburg, Vorbereitende Maßnahmen für den Neubau einer Interims-Containeranlage](https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/10/84169ed6-82af-4c2e-ab23-5211aa004ff5.html)
+Excluded (separately tendered ancillary trade): [Containeranlage Primusschule  - Tiefbauarbeiten](https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/10/0274244c-ff19-4cc8-a4f5-554b91e4bc7a.html)
+Duplicate or missing notice ID: [19-1047-26 TSV Bemerode - Interimsgebäude Interimsumkleide- Erstellung einer wiederverwendbaren Interimscontaineranlage in Systembauweise](https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/Landeshauptstadt-Hannover/2026/10/6667008.html)
+Duplicate or missing notice ID: [Erstellung der Ausführungsplanung und die
+schlüsselfertige Errichtung der Interimsschulanlage auf Basis der vom
+Auftraggeber erstellten Entwurfs- und Genehmigungsplanung](https://www.service.bund.de/IMPORTE/Ausschreibungen/aumass/2026/10/AV286BEA-EU-E001.html)
+Excluded (bid/participation deadline expired): [Neubau Containeranlage zum Hortbetrieb, E.-André-Str. 51, 18069 Rostock - Los 5a Akustikdecken](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport15/2026/10/E29661129.html)
+Excluded (bid/participation deadline expired): [Neubau Containeranlage zum Hortbetrieb, E.-André-Str. 51, 18069 Rostock - Los 5a Akustikdecken](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/10/E29661129.html)
+Excluded (separately tendered ancillary trade): [Zwingende Dringlichkeitsbeschaffung: Übergangslösung BVS Schule Containeranlage, LOS 8: Lieferung und Montage Inventar Werkräume](https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-dabl/2026/10/54321-Tender-1a0a0b1cb70-66cd00dc1065079.html)
+Excluded (bid/participation deadline expired): [Neubau Containeranlage zum Hortbetrieb, E.-André-Str. 51, 18069 Rostock - Los 11 Abbruch/Schadstoffsanierung](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport15/2026/09/E95997496.html)
+Excluded (bid/participation deadline expired): [Neubau Containeranlage zum Hortbetrieb, E.-André-Str. 51, 18069 Rostock - Los 11 Abbruch/Schadstoffsanierung](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/09/E95997496.html)
+Excluded (bid/participation deadline expired): [Ausschreibung von Generalunternehmerleistungen für den Neubau einer Containeranlage in Modulbauweise am Standort der Förderschule Hiddinghausen](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/09/E27441731.html)
+Excluded (bid/participation deadline expired): [Neubau Containeranlage zum Hortbetrieb, E.-André-Str. 51, 18069 Rostock - Los 8 Bodenbelagsarbeiten](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/08/E64887563.html)
+Excluded (bid/participation deadline expired): [Kläranlage (KA) Arnsberg- Neheim, Los 2](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/08/E54197793.html)
+Excluded (bid/participation deadline expired): [Interimskita Trierweiler - Containeranlage](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/08/E87997737.html)
+Excluded (bid/participation deadline expired): [Containeranlage Portlandstraße 26, Schillerschule Mainz](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/07/E23358113.html)
+Excluded (bid/participation deadline expired): [Grundschule Im Feldgarten Mainz Ebersheim-Kauf Containeranlage Mensa inkl. Ausbauarbeiten](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/08/E16933587.html)
+Excluded (bid/participation deadline expired): [Baulogistik](https://www.service.bund.de/IMPORTE/Ausschreibungen/aumass/2026/07/AV2832D9-EU-E001.html)
+Excluded (bid/participation deadline expired): [Grundschule Martin-Luther-King, Kauf Containeranlage inkl. Ausbauarbeiten](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/05/E81374841.html)
+Excluded (bid/participation deadline expired): [Gundschule Münchfeld Mainz-Kauf Containeranlage inkl. Ausarbeiten](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/05/E37566821.html)
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Containeranlagen&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetch error: 502
+Fetch failed from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Containeranlagen&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=B%C3%BCrocontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetch error: 502
+Fetch failed from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=B%C3%BCrocontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Schulcontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetch error: 502
+Fetch failed from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Schulcontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Sanit%C3%A4rcontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Duplicate or missing notice ID: [VE01 Baustelleneinrichtung](https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7084581.html)
+Excluded (no parseable bid/participation deadline): [Campus Handwerk - Allgemeine Baustelleneinrichtung - Nachtragsvergabe](https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/10/7073370.html)
+Duplicate or missing notice ID: [Vitalzentrum an der Fuhneaue](https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/10/7067925.html)
+Duplicate or missing notice ID: [19-1072-26 Stadtbibliothek Hildesheimer Straße, Umbau und Erweiterung WC-Anlagen; Sanitärcontainer, provisorische WC-Anlage](https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/Landeshauptstadt-Hannover/2026/10/6667001.html)
+Duplicate or missing notice ID: [26A80137, Steuerakademie Niedersachsen in Rinteln, Schaffung Barrierefreiheit, Sanitärcontainer und Laufsteg](https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-nds/2026/10/136338.html)
+Excluded (bid/participation deadline expired): [Sanitärcontainer für den Amtsbauhof](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2024/09/E89955344.html)
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Raumcontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Mietcontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Excluded (bid/participation deadline expired): [Bugenhagen-Schule - Interim](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/06/E11956924.html)
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Modulcontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetch error: 502
+Fetch failed from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Modulcontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Containergeb%C3%A4ude&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Duplicate or missing notice ID: [Bau Sozialgebäude Bauhof](https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/10/7071142.html)
+Excluded (bid/participation deadline expired): [Planung und Errichtung eines Containergebäudes zur Unterbringung von Strahlenschutzmesstechnik](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/08/E35275767.html)
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Raummodule&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Interimsgeb%C3%A4ude&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Duplicate or missing notice ID: [19-1047-26 TSV Bemerode - Interimsgebäude Interimsumkleide- Erstellung einer wiederverwendbaren Interimscontaineranlage in Systembauweise](https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/Landeshauptstadt-Hannover/2026/10/6667008.html)
+Excluded (separately tendered ancillary trade): [19-1021-26 TSV Bemerode - Interimsgebäude; Sanitärtechnische Tiefbauarbeiten](https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/Landeshauptstadt-Hannover/2026/10/6665578.html)
+Excluded (bid/participation deadline expired): [Bugenhagen-Schule - Interim](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/06/E11956924.html)
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Kindergartencontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetch error: 502
+Fetch failed from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Kindergartencontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Interimscontainer&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Containerdorf&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Raumzellen&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Excluded (bid/participation deadline expired): [Lieferung von 8 Stück Mehrzweck Raumzellen 20 Fuss](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport15/2026/09/E21211833.html)
+Excluded (bid/participation deadline expired): [Lieferung von 8 Stück Mehrzweck Raumzellen 20 Fuss](https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/09/E21211833.html)
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Interimsschule&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Mobilraumsystem&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Raumsystem&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetch error: 502
+Fetch failed from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Raumsystem&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Ersatzgeb%C3%A4ude&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Behelfsgeb%C3%A4ude&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Interimsl%C3%B6sung&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Excluded (separately tendered ancillary trade): [Erweiterung GS Warderfelde - Architektenleistung](https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-dabl/2026/10/54321-Tender-1a133df1f73-49ffe77d5885413b.html)
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Modulbau&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetch error: 502
+Fetch failed from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Modulbau&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Modulbauten&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Modulgeb%C3%A4ude&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetch error: 502
+Fetch failed from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=Modulgeb%C3%A4ude&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetching from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=mobile%20Raumeinheiten&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+Fetch error: 502
+Fetch failed from https://www.service.bund.de/Content/DE/Ausschreibungen/Suche/Formular.html?nn=4641482&ambit_distance=10&type=0&submit=Finden&resultsPerPage=100&templateQueryString=mobile%20Raumeinheiten&sortOrder=dateOfIssue_dt+desc&jobsrss=true
+append_entries: 2
+Finish: 2026-11-05 05:53:04.839379
