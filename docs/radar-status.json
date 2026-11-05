@@ -1,0 +1,45 @@
+{
+  "updated_at": "2026-11-05T11:38:20.434454+01:00",
+  "updated_at_display": "05.11.2026 11:38 CET",
+  "through": "2026-11-04",
+  "bootstrap_since": "2026-09-01",
+  "items": 78,
+  "passend": 6,
+  "pruefen": 72,
+  "cross_source_duplicates_merged": 5,
+  "sources": [
+    "service.bund.de",
+    "öffentlichevergabe.de"
+  ],
+  "imports": [
+    {
+      "period": "2026-09",
+      "notices": 23517,
+      "sha256": [
+        "80d82fbb84d953c2e73e536eec4617e45b866a4eb1b64014e5a54ca638546dcd",
+        "8a5a7c0c7ebd942c399f8b1f35ec02006bf192d2b921e8981041b46c7a49da53"
+      ]
+    },
+    {
+      "period": "2026-10",
+      "notices": 24577,
+      "sha256": [
+        "621f6b5afba4731e4eb4cfc0dc8c8df2f4d97f390cbcc4e82ff67604473837ea",
+        "5ef69b9a78db0de2b111ce7a835574977b518cd2caf18397590838c9841b1470"
+      ]
+    },
+    {
+      "period": "2026-11",
+      "notices": 2479,
+      "sha256": [
+        "5726adbbb8f5854eb24fc4032ac45b6f8a21001f8e5881496e8568bb38bbf77d",
+        "a90976cec3c00b882da49e124b9ec9a7d8abbcb52cce432a232bd76ab9088e63"
+      ]
+    }
+  ],
+  "limitations": [
+    "Not a complete pre-September-2026 active inventory",
+    "Uncertain cross-source duplicates remain separate",
+    "Not all withdrawal notices carry explicit lot outcomes"
+  ]
+}
