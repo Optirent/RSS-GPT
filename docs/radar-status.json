@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-05T11:38:20.434454+01:00",
-  "updated_at_display": "05.11.2026 11:38 CET",
-  "through": "2026-11-04",
+  "updated_at": "2026-11-06T07:01:58.367840+01:00",
+  "updated_at_display": "06.11.2026 07:01 CET",
+  "through": "2026-11-05",
   "bootstrap_since": "2026-09-01",
-  "items": 78,
-  "passend": 6,
-  "pruefen": 72,
+  "items": 82,
+  "passend": 7,
+  "pruefen": 75,
   "cross_source_duplicates_merged": 5,
   "sources": [
     "service.bund.de",
@@ -13,27 +13,39 @@
   ],
   "imports": [
     {
-      "period": "2026-09",
-      "notices": 23517,
+      "period": "2026-11-02",
+      "source_period": "2026-11-02",
+      "notices": 89,
       "sha256": [
-        "80d82fbb84d953c2e73e536eec4617e45b866a4eb1b64014e5a54ca638546dcd",
-        "8a5a7c0c7ebd942c399f8b1f35ec02006bf192d2b921e8981041b46c7a49da53"
+        "b3fa2fc0cada7ccd7ef0cc33464855164ff0c4be8c3292dac7821dd21d2d005c",
+        "8fa2f7c1c2ba693af2a4c84b7747021444d3700a0481ae5b42e2f24cda667bc9"
       ]
     },
     {
-      "period": "2026-10",
-      "notices": 24577,
+      "period": "2026-11-03",
+      "source_period": "2026-11-03",
+      "notices": 1021,
       "sha256": [
-        "621f6b5afba4731e4eb4cfc0dc8c8df2f4d97f390cbcc4e82ff67604473837ea",
-        "5ef69b9a78db0de2b111ce7a835574977b518cd2caf18397590838c9841b1470"
+        "047a9d57c1f75d8598fa141646fc029eae9a226887b1b4278982a61aa8a17f6d",
+        "ffa1d363a5d41e7e04f6cff1dec43e1de63c2185f232df3913228ec6104b1289"
       ]
     },
     {
-      "period": "2026-11",
-      "notices": 2479,
+      "period": "2026-11-04",
+      "source_period": "2026-11-04",
+      "notices": 720,
       "sha256": [
-        "5726adbbb8f5854eb24fc4032ac45b6f8a21001f8e5881496e8568bb38bbf77d",
-        "a90976cec3c00b882da49e124b9ec9a7d8abbcb52cce432a232bd76ab9088e63"
+        "e1c2a5285b1ba616ee35ac3d2cfd8074db3b991a23fd79a2f244d802fd41c379",
+        "9cd0a0f34fb86c517987b1ea7b33ac2044245d83f4c5a2f75ab42ff63d72a4e0"
+      ]
+    },
+    {
+      "period": "2026-11-05",
+      "source_period": "2026-11",
+      "notices": 3649,
+      "sha256": [
+        "d09e3fdb595bd4daaeb9a52182a6868e321d04d4c103e253fa614e341a483f24",
+        "89d7d61ee00ac07bf7a1dc0bf0a520e97ee308371e9a5e0916cd5195b335070d"
       ]
     }
   ],
