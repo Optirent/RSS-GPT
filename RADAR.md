@@ -21,6 +21,9 @@ werden nicht in den gemeinsamen RSS-Feed aufgenommen.
   drei Tage werden überlappend erneut geprüft.
 - `data/radar-state.json` hält Bekanntmachungen, Berichtigungsverweise,
   lotbezogene Ergebnisse, service.bund-Einträge und den letzten Abrufstand.
+- Stimmen Tagesübersicht und XML-Details nicht überein, wird automatisch der
+  vollständige Monat abgerufen und erneut auf Vollständigkeit geprüft. Schlägt auch
+  diese Prüfung fehl, bleiben Feed und Abrufstand unverändert.
 - Alle Quellen müssen erfolgreich abrufbar und syntaktisch gültig sein.
   Bei Fehlern bricht der Lauf vor der Veröffentlichung ab; der letzte gute Feed
   und sein Datenstand bleiben erhalten. Der Fehler ist in GitHub Actions sichtbar.

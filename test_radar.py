@@ -1,4 +1,6 @@
 import copy
+import io
+import zipfile
 import datetime as dt
 import json
 from pathlib import Path
@@ -8,7 +10,7 @@ from unittest.mock import patch
 import xml.etree.ElementTree as ET
 from oeffentlichevergabe import BERLIN
 from optirent_filter import canonical_key
-from radar import initial_state, ingest, ov_rows, merge_rows, rss_bytes, refresh_ov, run
+from radar import initial_state, ingest, ov_rows, merge_rows, rss_bytes, refresh_ov, run, IncompleteExportError
 
 NOW=dt.datetime(2026,11,5,12,tzinfo=BERLIN)
 
@@ -19,6 +21,42 @@ def row(source='öffentlichevergabe.de',lot='LOT-0001'):
     return dict(title='Lieferung Schulcontainer',buyer='Stadt Mainz',deadline='2026-12-01T10:00:00+01:00',deadline_kind='Angebotsfrist',deadline_has_time=True,description='Container',source=source,documents=[],publication='2026-11-01T10:00:00Z',location='Mainz',notice_id='N1',lot_id=lot,url='https://oeffentlichevergabe.de/ui/de/search/details?noticeId=N1&lotId='+lot,status='Aktuell',rating='Passend',reason='',groups=['2'],service_body='Angebotsfrist: 01.12.2026 10:00')
 
 class RadarTests(unittest.TestCase):
+    def export_pair(self, ids, xml_ids):
+        csv_data='noticeIdentifier,noticeVersion,publicationDate\n'+''.join(f'{nid},1,2026-11-05T10:00:00Z\n' for nid in ids)
+        bodies=[]
+        for files in ({'notice.csv':csv_data}, {nid+'.xml':notice(nid=nid) for nid in xml_ids}):
+            stream=io.BytesIO()
+            with zipfile.ZipFile(stream,'w') as z:
+                for name,body in files.items(): z.writestr(name,body)
+            bodies.append(stream.getvalue())
+        return bodies
+
+    def test_incomplete_daily_export_recovers_from_month(self):
+        state=initial_state();state['last_day']='2026-11-05'
+        daily=self.export_pair(['N1','N2'],['N1'])
+        monthly=self.export_pair(['N1','N2'],['N1','N2'])
+        with patch('radar.request_bytes',side_effect=daily+monthly) as fetch:
+            imports=refresh_ov(state,dt.date(2026,11,5),'2026-11-05')
+        self.assertEqual(set(state['notices']),{'N1','N2'})
+        self.assertEqual(imports[0]['source_period'],'2026-11')
+        self.assertEqual(imports[0]['notices'],2)
+        self.assertIn('pubMonth=2026-11',fetch.call_args_list[-1].args[0])
+
+    def test_incomplete_month_preserves_state_and_watermark(self):
+        state=initial_state();state['last_day']='2026-11-04';before=copy.deepcopy(state)
+        incomplete=self.export_pair(['N1','N2'],['N1'])
+        with patch('radar.request_bytes',side_effect=incomplete+incomplete):
+            with self.assertRaises(IncompleteExportError):
+                refresh_ov(state,dt.date(2026,11,5),'2026-11-05')
+        self.assertEqual(state,before)
+
+    def test_complete_daily_export_needs_no_month_download(self):
+        state=initial_state();state['last_day']='2026-11-05'
+        with patch('radar.request_bytes',side_effect=self.export_pair(['N1'],['N1'])) as fetch:
+            refresh_ov(state,dt.date(2026,11,5),'2026-11-05')
+        self.assertEqual(fetch.call_count,2)
+        self.assertEqual(set(state['notices']),{'N1'})
+
     def test_query_ids_and_lots_preserved(self):
         self.assertNotEqual(canonical_key({'link':'https://oeffentlichevergabe.de/ui/de/search/details?noticeId=A'}),canonical_key({'link':'https://oeffentlichevergabe.de/ui/de/search/details?noticeId=B'}))
         self.assertNotEqual(canonical_key({'link':row(lot='LOT-0001')['url']}),canonical_key({'link':row(lot='LOT-0002')['url']}))

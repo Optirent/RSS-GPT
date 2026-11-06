@@ -6,6 +6,7 @@ Persistent state is committed together with the feed by the workflow.
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 import configparser
+import copy
 import csv
 import datetime as dt
 from email.utils import format_datetime, parsedate_to_datetime
@@ -73,6 +74,10 @@ def ingest(state, xml, publication, root=None):
                 if not previous or publication>=previous['publication']:
                     state['outcomes'][key]={'decision':decision,'publication':publication,'notice_id':nid}
 
+class IncompleteExportError(ValueError):
+    """The two official export formats do not describe the same notice set."""
+
+
 def apply_export(state, csv_body, xml_body):
     with zipfile.ZipFile(io.BytesIO(csv_body)) as z:
         if not z.namelist(): pubs={}
@@ -84,9 +89,9 @@ def apply_export(state, csv_body, xml_body):
             if not name.endswith('.xml'): continue
             data=z.read(name);root=ET.fromstring(data)
             key=(txt(root,'cbc:ID'),txt(root,'cbc:VersionID').lstrip('0') or '0')
-            if key not in pubs: raise ValueError('XML notice missing from publication index: '+str(key))
+            if key not in pubs: raise IncompleteExportError('XML notice missing from publication index: '+str(key))
             ingest(state,data,pubs[key],root);seen.add(key)
-    if seen!=set(pubs): raise ValueError('Incomplete export: CSV and eForms identifiers differ')
+    if seen!=set(pubs): raise IncompleteExportError(f'Incomplete export: {len(pubs)} CSV notices, {len(seen)} XML notices; {len(set(pubs)-seen)} missing, {len(seen-set(pubs))} extra')
     return len(seen)
 
 def refresh_ov(state, through, bootstrap_since, bootstrap_cache=None):
@@ -108,8 +113,20 @@ def refresh_ov(state, through, bootstrap_since, bootstrap_cache=None):
         for fmt in ('csv.zip','eforms.zip'):
             path=Path(bootstrap_cache)/f'{period}-{fmt}' if bootstrap_cache and param=='pubMonth' else None
             bodies.append(path.read_bytes() if path and path.exists() else request_bytes(f'{API}?{param}={period}&format={fmt}'))
-        count=apply_export(state,*bodies)
-        imports.append({'period':period,'notices':count,'sha256':[hashlib.sha256(b).hexdigest() for b in bodies]})
+        # A valid ZIP can still be truncated by the provider. Never commit partial imports.
+        candidate=copy.deepcopy(state)
+        source_period=period
+        try:
+            count=apply_export(candidate,*bodies)
+        except IncompleteExportError as exc:
+            if param!='pubDay': raise
+            source_period=period[:7]
+            print(f'{period}: {exc}; retrying complete monthly export {source_period}',flush=True)
+            bodies=[request_bytes(f'{API}?pubMonth={source_period}&format={fmt}') for fmt in ('csv.zip','eforms.zip')]
+            candidate=copy.deepcopy(state)
+            count=apply_export(candidate,*bodies)
+        state.clear();state.update(candidate)
+        imports.append({'period':period,'source_period':source_period,'notices':count,'sha256':[hashlib.sha256(b).hexdigest() for b in bodies]})
         print(f'öffentlichevergabe: {period}, {count} Bekanntmachungen',flush=True)
     state['last_day']=through.isoformat()
     known_procedures={n['procedure'] for n in state['notices'].values() if n['procedure']}
