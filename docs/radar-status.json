@@ -1,26 +1,17 @@
 {
-  "updated_at": "2026-11-07T06:40:34.711968+01:00",
-  "updated_at_display": "07.11.2026 06:40 CET",
-  "through": "2026-11-06",
+  "updated_at": "2026-11-09T06:56:07.317054+01:00",
+  "updated_at_display": "09.11.2026 06:56 CET",
+  "through": "2026-11-08",
   "bootstrap_since": "2026-09-01",
-  "items": 98,
-  "passend": 6,
-  "pruefen": 92,
-  "cross_source_duplicates_merged": 6,
+  "items": 106,
+  "passend": 8,
+  "pruefen": 98,
+  "cross_source_duplicates_merged": 9,
   "sources": [
     "service.bund.de",
     "öffentlichevergabe.de"
   ],
   "imports": [
-    {
-      "period": "2026-11-03",
-      "source_period": "2026-11-03",
-      "notices": 1021,
-      "sha256": [
-        "047a9d57c1f75d8598fa141646fc029eae9a226887b1b4278982a61aa8a17f6d",
-        "ffa1d363a5d41e7e04f6cff1dec43e1de63c2185f232df3913228ec6104b1289"
-      ]
-    },
     {
       "period": "2026-11-04",
       "source_period": "2026-11-04",
@@ -33,19 +24,37 @@
     {
       "period": "2026-11-05",
       "source_period": "2026-11",
-      "notices": 4777,
+      "notices": 5904,
       "sha256": [
-        "3bb16efbef84a74263d940c67781decb25aa1a3e17f03a8b87c479aa7db48ee5",
-        "187701dcea0116e8e88710f5d45d3b662703ff4621196e46d8d2829fa0e3e065"
+        "651c2175f3b75dda0edbe0c85faf793c3e83b5919d239dceb9e19eba79970d98",
+        "8cbb273bb76f2a51515c792dddf2ca744a485bd2f393c2df7094664818a825e9"
       ]
     },
     {
       "period": "2026-11-06",
       "source_period": "2026-11",
-      "notices": 4777,
+      "notices": 5904,
       "sha256": [
-        "3bb16efbef84a74263d940c67781decb25aa1a3e17f03a8b87c479aa7db48ee5",
-        "187701dcea0116e8e88710f5d45d3b662703ff4621196e46d8d2829fa0e3e065"
+        "651c2175f3b75dda0edbe0c85faf793c3e83b5919d239dceb9e19eba79970d98",
+        "8cbb273bb76f2a51515c792dddf2ca744a485bd2f393c2df7094664818a825e9"
+      ]
+    },
+    {
+      "period": "2026-11-07",
+      "source_period": "2026-11",
+      "notices": 5904,
+      "sha256": [
+        "651c2175f3b75dda0edbe0c85faf793c3e83b5919d239dceb9e19eba79970d98",
+        "8cbb273bb76f2a51515c792dddf2ca744a485bd2f393c2df7094664818a825e9"
+      ]
+    },
+    {
+      "period": "2026-11-08",
+      "source_period": "2026-11",
+      "notices": 5904,
+      "sha256": [
+        "651c2175f3b75dda0edbe0c85faf793c3e83b5919d239dceb9e19eba79970d98",
+        "8cbb273bb76f2a51515c792dddf2ca744a485bd2f393c2df7094664818a825e9"
       ]
     }
   ],
