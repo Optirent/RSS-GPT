@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-09T06:56:07.317054+01:00",
-  "updated_at_display": "09.11.2026 06:56 CET",
-  "through": "2026-11-08",
+  "updated_at": "2026-11-10T06:45:53.529591+01:00",
+  "updated_at_display": "10.11.2026 06:45 CET",
+  "through": "2026-11-09",
   "bootstrap_since": "2026-09-01",
-  "items": 106,
+  "items": 104,
   "passend": 8,
-  "pruefen": 98,
+  "pruefen": 96,
   "cross_source_duplicates_merged": 9,
   "sources": [
     "service.bund.de",
@@ -13,48 +13,39 @@
   ],
   "imports": [
     {
-      "period": "2026-11-04",
-      "source_period": "2026-11-04",
-      "notices": 720,
-      "sha256": [
-        "e1c2a5285b1ba616ee35ac3d2cfd8074db3b991a23fd79a2f244d802fd41c379",
-        "9cd0a0f34fb86c517987b1ea7b33ac2044245d83f4c5a2f75ab42ff63d72a4e0"
-      ]
-    },
-    {
-      "period": "2026-11-05",
-      "source_period": "2026-11",
-      "notices": 5904,
-      "sha256": [
-        "651c2175f3b75dda0edbe0c85faf793c3e83b5919d239dceb9e19eba79970d98",
-        "8cbb273bb76f2a51515c792dddf2ca744a485bd2f393c2df7094664818a825e9"
-      ]
-    },
-    {
       "period": "2026-11-06",
       "source_period": "2026-11",
-      "notices": 5904,
+      "notices": 5995,
       "sha256": [
-        "651c2175f3b75dda0edbe0c85faf793c3e83b5919d239dceb9e19eba79970d98",
-        "8cbb273bb76f2a51515c792dddf2ca744a485bd2f393c2df7094664818a825e9"
+        "ca6d819339f669be0d13c7c80ecce883f7f55b39093ce5307d555da64ba034b2",
+        "cef8aaa2dea925cce3653dbe4c315dfd67acbf100384c3f087f87e8fb680a268"
       ]
     },
     {
       "period": "2026-11-07",
       "source_period": "2026-11",
-      "notices": 5904,
+      "notices": 5995,
       "sha256": [
-        "651c2175f3b75dda0edbe0c85faf793c3e83b5919d239dceb9e19eba79970d98",
-        "8cbb273bb76f2a51515c792dddf2ca744a485bd2f393c2df7094664818a825e9"
+        "ca6d819339f669be0d13c7c80ecce883f7f55b39093ce5307d555da64ba034b2",
+        "cef8aaa2dea925cce3653dbe4c315dfd67acbf100384c3f087f87e8fb680a268"
       ]
     },
     {
       "period": "2026-11-08",
       "source_period": "2026-11",
-      "notices": 5904,
+      "notices": 5995,
       "sha256": [
-        "651c2175f3b75dda0edbe0c85faf793c3e83b5919d239dceb9e19eba79970d98",
-        "8cbb273bb76f2a51515c792dddf2ca744a485bd2f393c2df7094664818a825e9"
+        "ca6d819339f669be0d13c7c80ecce883f7f55b39093ce5307d555da64ba034b2",
+        "cef8aaa2dea925cce3653dbe4c315dfd67acbf100384c3f087f87e8fb680a268"
+      ]
+    },
+    {
+      "period": "2026-11-09",
+      "source_period": "2026-11",
+      "notices": 5995,
+      "sha256": [
+        "ca6d819339f669be0d13c7c80ecce883f7f55b39093ce5307d555da64ba034b2",
+        "cef8aaa2dea925cce3653dbe4c315dfd67acbf100384c3f087f87e8fb680a268"
       ]
     }
   ],
