@@ -1,7 +1,10 @@
 {
-  "updated_at": "2026-11-12T06:53:16.438769+01:00",
-  "updated_at_display": "12.11.2026 06:53 CET",
+  "updated_at": "2026-11-12T07:10:46.433984+01:00",
+  "updated_at_display": "12.11.2026 07:10 CET",
   "through": "2026-11-11",
+  "ov_target_through": "2026-11-11",
+  "ov_status": "complete",
+  "ov_error": null,
   "bootstrap_since": "2026-09-01",
   "items": 111,
   "passend": 7,
@@ -12,24 +15,6 @@
     "öffentlichevergabe.de"
   ],
   "imports": [
-    {
-      "period": "2026-11-07",
-      "source_period": "2026-11-07",
-      "notices": 505,
-      "sha256": [
-        "0caeb97ebb663d593dd32f8cdada373f359db4ad74b1cc622b8c67e424c52003",
-        "f2178c4543964a71ec6aabfe278a28ed8f8a9b152c8d75599e986659b3464e68"
-      ]
-    },
-    {
-      "period": "2026-11-08",
-      "source_period": "2026-11-08",
-      "notices": 622,
-      "sha256": [
-        "40dfe17eb8ac8e43749ed77510ac504f99a49fb5aebbfeb3ff0e2e050876df5c",
-        "cdefb0a770ef02623622c2ae981a76a43cea57bc993ba041ecdc9f071f1ec09b"
-      ]
-    },
     {
       "period": "2026-11-09",
       "source_period": "2026-11-09",
