@@ -1,51 +1,60 @@
 {
-  "updated_at": "2026-11-10T06:45:53.529591+01:00",
-  "updated_at_display": "10.11.2026 06:45 CET",
-  "through": "2026-11-09",
+  "updated_at": "2026-11-12T06:53:16.438769+01:00",
+  "updated_at_display": "12.11.2026 06:53 CET",
+  "through": "2026-11-11",
   "bootstrap_since": "2026-09-01",
-  "items": 104,
-  "passend": 8,
-  "pruefen": 96,
-  "cross_source_duplicates_merged": 9,
+  "items": 111,
+  "passend": 7,
+  "pruefen": 104,
+  "cross_source_duplicates_merged": 8,
   "sources": [
     "service.bund.de",
     "öffentlichevergabe.de"
   ],
   "imports": [
     {
-      "period": "2026-11-06",
-      "source_period": "2026-11",
-      "notices": 5995,
-      "sha256": [
-        "ca6d819339f669be0d13c7c80ecce883f7f55b39093ce5307d555da64ba034b2",
-        "cef8aaa2dea925cce3653dbe4c315dfd67acbf100384c3f087f87e8fb680a268"
-      ]
-    },
-    {
       "period": "2026-11-07",
-      "source_period": "2026-11",
-      "notices": 5995,
+      "source_period": "2026-11-07",
+      "notices": 505,
       "sha256": [
-        "ca6d819339f669be0d13c7c80ecce883f7f55b39093ce5307d555da64ba034b2",
-        "cef8aaa2dea925cce3653dbe4c315dfd67acbf100384c3f087f87e8fb680a268"
+        "0caeb97ebb663d593dd32f8cdada373f359db4ad74b1cc622b8c67e424c52003",
+        "f2178c4543964a71ec6aabfe278a28ed8f8a9b152c8d75599e986659b3464e68"
       ]
     },
     {
       "period": "2026-11-08",
-      "source_period": "2026-11",
-      "notices": 5995,
+      "source_period": "2026-11-08",
+      "notices": 622,
       "sha256": [
-        "ca6d819339f669be0d13c7c80ecce883f7f55b39093ce5307d555da64ba034b2",
-        "cef8aaa2dea925cce3653dbe4c315dfd67acbf100384c3f087f87e8fb680a268"
+        "40dfe17eb8ac8e43749ed77510ac504f99a49fb5aebbfeb3ff0e2e050876df5c",
+        "cdefb0a770ef02623622c2ae981a76a43cea57bc993ba041ecdc9f071f1ec09b"
       ]
     },
     {
       "period": "2026-11-09",
-      "source_period": "2026-11",
-      "notices": 5995,
+      "source_period": "2026-11-09",
+      "notices": 91,
       "sha256": [
-        "ca6d819339f669be0d13c7c80ecce883f7f55b39093ce5307d555da64ba034b2",
-        "cef8aaa2dea925cce3653dbe4c315dfd67acbf100384c3f087f87e8fb680a268"
+        "0e9200a6346520230881f58321195c68c15d0ac2c8983c75c8c6cd33cc6a657c",
+        "fbf5831afdcb2803e451d076022a667a03949089b26aa36db46398d11303b126"
+      ]
+    },
+    {
+      "period": "2026-11-10",
+      "source_period": "2026-11-10",
+      "notices": 1059,
+      "sha256": [
+        "feb6d31556664a2506628e87c653cfaa4bce4bb4734256fa291b5ec82072269a",
+        "90b73efa84d098de6efcf855cc82f8507667df7f4fa27a7c362fc190c6b92f0b"
+      ]
+    },
+    {
+      "period": "2026-11-11",
+      "source_period": "2026-11-11",
+      "notices": 1206,
+      "sha256": [
+        "a09b7dd01d8f62a1558cf891bc2ec33bb745bfa9487ca541632c6d9c4848771b",
+        "56b4d202cf62a9f6b68f191bcffbcf3927336ff6cf2ee6916023c5f57013a4de"
       ]
     }
   ],
