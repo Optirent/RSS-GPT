@@ -31,24 +31,55 @@ class RadarTests(unittest.TestCase):
             bodies.append(stream.getvalue())
         return bodies
 
-    def test_incomplete_daily_export_recovers_from_month(self):
+    def test_incomplete_daily_export_retries_same_day(self):
         state=initial_state();state['last_day']='2026-11-05'
-        daily=self.export_pair(['N1','N2'],['N1'])
-        monthly=self.export_pair(['N1','N2'],['N1','N2'])
-        with patch('radar.request_bytes',side_effect=daily+monthly) as fetch:
+        incomplete=self.export_pair(['N1','N2'],['N1'])
+        complete=self.export_pair(['N1','N2'],['N1','N2'])
+        with patch('radar.request_bytes',side_effect=incomplete+complete) as fetch,patch('radar.time.sleep') as sleeper:
             imports=refresh_ov(state,dt.date(2026,11,5),'2026-11-05')
         self.assertEqual(set(state['notices']),{'N1','N2'})
-        self.assertEqual(imports[0]['source_period'],'2026-11')
+        self.assertEqual(imports[0]['source_period'],'2026-11-05')
         self.assertEqual(imports[0]['notices'],2)
-        self.assertIn('pubMonth=2026-11',fetch.call_args_list[-1].args[0])
+        self.assertEqual(fetch.call_count,4)
+        self.assertTrue(all('pubDay=2026-11-05' in x.args[0] for x in fetch.call_args_list))
+        sleeper.assert_called_once_with(15)
 
-    def test_incomplete_month_preserves_state_and_watermark(self):
+    def test_repeated_incomplete_day_preserves_state_and_watermark(self):
         state=initial_state();state['last_day']='2026-11-04';before=copy.deepcopy(state)
         incomplete=self.export_pair(['N1','N2'],['N1'])
-        with patch('radar.request_bytes',side_effect=incomplete+incomplete):
+        with patch('radar.request_bytes',side_effect=incomplete*3) as fetch,patch('radar.time.sleep') as sleeper:
             with self.assertRaises(IncompleteExportError):
                 refresh_ov(state,dt.date(2026,11,5),'2026-11-05')
         self.assertEqual(state,before)
+        self.assertEqual(fetch.call_count,6)
+        self.assertEqual([x.args[0] for x in sleeper.call_args_list],[15,45])
+        self.assertFalse(any('pubMonth' in x.args[0] for x in fetch.call_args_list))
+
+    def test_ov_failure_publishes_service_with_stale_warning(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d);(p/'docs').mkdir();(p/'data').mkdir()
+            (p/'docs/optirent-ausschreibungen.xml').write_bytes(b'old feed')
+            (p/'config.ini').write_text('[source001]\\nurl="https://source.test/feed"\\n'.replace('\\n','\n'))
+            original=initial_state();original['last_day']='2026-11-09'
+            (p/'data/radar-state.json').write_text(json.dumps(original))
+            item=row(source='service.bund.de')
+            item['url']='https://www.service.bund.de/IMPORTE/Ausschreibungen/test.html'
+            def service_update(state,urls,now,feed):
+                state['service'][canonical_key({'link':item['url']})]=item
+            with patch('radar.refresh_ov',side_effect=IncompleteExportError('day export incomplete')):
+                with patch('radar.refresh_service',side_effect=service_update):
+                    run(p)
+            restored=json.loads((p/'data/radar-state.json').read_text())
+            self.assertEqual(restored['last_day'],'2026-11-09')
+            self.assertEqual(len(restored['service']),1)
+            status=json.loads((p/'docs/radar-status.json').read_text())
+            self.assertEqual(status['ov_status'],'stale')
+            self.assertIn('day export incomplete',status['ov_error'])
+            self.assertEqual(status['through'],'2026-11-09')
+            rss=ET.fromstring((p/'docs/optirent-ausschreibungen.xml').read_bytes())
+            self.assertIn('ACHTUNG:',rss.findtext('channel/description'))
+            self.assertGreaterEqual(len(rss.findall('.//item')),1)
+            self.assertIn('Achtung:',(p/'docs/index.html').read_text())
 
     def test_complete_daily_export_needs_no_month_download(self):
         state=initial_state();state['last_day']='2026-11-05'
