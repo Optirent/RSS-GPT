@@ -10,7 +10,7 @@ from unittest.mock import patch
 import xml.etree.ElementTree as ET
 from oeffentlichevergabe import BERLIN
 from optirent_filter import canonical_key
-from radar import initial_state, ingest, ov_rows, merge_rows, rss_bytes, refresh_ov, run, IncompleteExportError
+from radar import initial_state, ingest, ov_rows, merge_rows, rss_bytes, refresh_ov, run, IncompleteExportError, track_new, page_html
 
 NOW=dt.datetime(2026,11,5,12,tzinfo=BERLIN)
 
@@ -146,6 +146,32 @@ class RadarTests(unittest.TestCase):
         self.assertTrue(any('pubDay=2026-10-30' in u for u in urls))
         self.assertTrue(any('pubDay=2026-11-04' in u for u in urls))
         self.assertEqual(s['last_day'],'2026-11-04')
+
+    def test_daily_only_new_with_historical_memory(self):
+        seen={'schema':1,'day':'2026-11-11','seen_guids':['old','disappeared'],'new_guids':[]}
+        first=[dict(row(),guid='old'),dict(row(),guid='today')]
+        day=dt.datetime(2026,11,12,7,tzinfo=BERLIN)
+        self.assertEqual(track_new(seen,first,day),{'today'})
+        self.assertEqual(set(seen['seen_guids']),{'old','today','disappeared'})
+        # A second build the same day must retain the original new list.
+        self.assertEqual(track_new(seen,first,day),{'today'})
+        next_day=dt.datetime(2026,11,13,7,tzinfo=BERLIN)
+        self.assertEqual(track_new(seen,[dict(row(),guid='today'),
+                                         dict(row(),guid='disappeared')],next_day),set())
+        self.assertEqual(seen['new_guids'],[])
+        self.assertEqual(track_new(seen,[dict(row(),guid='brand_new')],next_day),{'brand_new'})
+
+    def test_website_defaults_to_new_and_can_show_all(self):
+        known=dict(row(),guid='already-known',sources=['service.bund.de'],links=[row()['url']])
+        new=dict(row(),guid='new-tender',sources=['service.bund.de'],links=[row()['url']])
+        status={'updated_at_display':'12.11.2026 08:00','through':'2026-11-11',
+                'new_items':1,'ov_status':'complete'}
+        html=page_html([known,new],status,{'new-tender'}).decode('utf-8')
+        self.assertIn('data-new="1"',html)
+        self.assertIn('data-new="0" hidden',html)
+        self.assertIn('<option value="new">Nur neue Ausschreibungen</option>',html)
+        self.assertIn('<option value="all">Alle aktiven Ausschreibungen</option>',html)
+        self.assertIn('1 neue',html)
 
     def test_rss_escapes_untrusted_text(self):
         r=row();r['title']='A & B <script>';r.update(guid='ID',sources=['a'],links=[r['url']])

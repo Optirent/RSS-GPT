@@ -244,6 +244,22 @@ def merge_rows(ov, service, now):
     active.sort(key=lambda r:(r['rating']!='Passend',r['deadline'] or '9999',r['title']))
     return active,merged
 
+def track_new(seen_state, rows, now):
+    """Persist all previously exposed RSS identities, including disappeared ones.
+
+    A second run on the same date retains the day's new entries, while a new
+    calendar day resets the daily list without forgetting earlier identities.
+    """
+    today=now.date().isoformat()
+    previous=set(seen_state.get('seen_guids',[]))
+    recent=set(seen_state.get('new_guids',[])) if seen_state.get('day')==today else set()
+    current={row['guid'] for row in rows}
+    newly_discovered=current-previous
+    seen_state.update(schema=1,day=today,seen_guids=sorted(previous|current),
+                      new_guids=sorted(recent|newly_discovered))
+    return recent|newly_discovered
+
+
 def deadline_label(r):
     if not r['deadline']:return 'Keine Frist angegeben – prüfen'
     value=dt.datetime.fromisoformat(r['deadline']).astimezone(BERLIN)
@@ -271,23 +287,25 @@ def rss_bytes(rows, now, source_warning=''):
     if len({r['guid'] for r in rows})!=len(rows):raise ValueError('Duplicate RSS identities')
     return data
 
-def page_html(rows, status):
+def page_html(rows, status, new_guids=()):
     e=html.escape
     warning=('<p role="alert"><strong>Achtung:</strong> Der aktuelle eForms-Import ist fehlgeschlagen. '
              'öffentlichevergabe.de ist nur bis zum '+e(str(status['through']))
              +' vollständig importiert. service.bund.de wurde neu geprüft.</p>'
              if status.get('ov_status')=='stale' else '')
-    cards=''.join(f'<article data-rating="{e(r["rating"])}"><small>{e(r["rating"])} · {e(", ".join(r["sources"]))}</small><h2><a href="{e(r["url"],quote=True)}">{e(r["title"])}</a></h2><p><b>{e(r["buyer"])}</b> · {e(r["location"])}</p><p><b>{e(r["deadline_kind"] or "Frist")}: {e(deadline_label(r))}</b></p><details><summary>Details und Quellen</summary>{description_html(r)}</details></article>' for r in rows)
-    return ('''<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OPTIRENT Ausschreibungsradar</title><style>body{font:16px system-ui;background:#f1f5f7;color:#173442;margin:0}main{max-width:1100px;margin:auto;padding:28px}a{color:#00607c}article{padding:22px;background:white;border:1px solid #d1dfe6;border-radius:9px;margin:16px 0}h2{font-size:21px}input,select{font:inherit;padding:10px;margin:5px;border:1px solid #9badb4;border-radius:5px}input{width:50%;min-width:220px}small{color:#4b6875}details{overflow-wrap:anywhere}[hidden]{display:none}</style><main><h1>OPTIRENT Ausschreibungsradar</h1>'''+f'<p>Letzte erfolgreiche Aktualisierung: {e(status["updated_at_display"])} · {len(rows)} Chancen</p><p>öffentlichevergabe.de: Veröffentlichungen bis {e(status["through"])}. Neue Veröffentlichungen erscheinen im Export am Folgetag. Automatische Vorauswahl; Angaben in den Originalunterlagen prüfen.</p>'+warning+'''<p><a href="optirent-ausschreibungen.xml">RSS-Feed abonnieren</a> · <a href="radar-status.json">Abrufstatus</a></p><input id="search" aria-label="Treffer durchsuchen" placeholder="Titel, Ort oder Vergabestelle"><select id="rating" aria-label="Einstufung"><option value="">Alle Chancen</option><option>Passend</option><option>Prüfen</option></select><p id="count"></p>'''+cards+'''<footer>„Prüfen“ umfasst unklare Leistungen sowie Vorinformationen oder Einträge ohne gesicherte Frist. Ältere offene Bekanntmachungen vor dem erstmaligen Import können fehlen.</footer></main><script>const q=document.querySelector('#search'),s=document.querySelector('#rating');function apply(){let n=0;for(const a of document.querySelectorAll('article')){a.hidden=!!((s.value&&a.dataset.rating!==s.value)||(q.value&&!a.textContent.toLocaleLowerCase('de').includes(q.value.toLocaleLowerCase('de'))));if(!a.hidden)n++}document.querySelector('#count').textContent=n+' Treffer'}q.addEventListener('input',apply);s.addEventListener('change',apply);apply();</script></html>''').encode('utf-8')
+    new_guids=set(new_guids)
+    cards=''.join(f'<article data-rating="{e(r["rating"])}" data-new="{int(r["guid"] in new_guids)}"{" hidden" if r["guid"] not in new_guids else ""}><small>{e(r["rating"])} · {e(", ".join(r["sources"]))}</small><h2><a href="{e(r["url"],quote=True)}">{e(r["title"])}</a></h2><p><b>{e(r["buyer"])}</b> · {e(r["location"])}</p><p><b>{e(r["deadline_kind"] or "Frist")}: {e(deadline_label(r))}</b></p><details><summary>Details und Quellen</summary>{description_html(r)}</details></article>' for r in rows)
+    return ('''<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OPTIRENT Ausschreibungsradar</title><style>body{font:16px system-ui;background:#f1f5f7;color:#173442;margin:0}main{max-width:1100px;margin:auto;padding:28px}a{color:#00607c}article{padding:22px;background:white;border:1px solid #d1dfe6;border-radius:9px;margin:16px 0}h2{font-size:21px}input,select{font:inherit;padding:10px;margin:5px;border:1px solid #9badb4;border-radius:5px}input{width:50%;min-width:220px}small{color:#4b6875}details{overflow-wrap:anywhere}[hidden]{display:none}</style><main><h1>OPTIRENT Ausschreibungsradar</h1>'''+f'<p>Stand: {e(status["updated_at_display"])} · <strong>{status["new_items"]} neue</strong> seit der letzten Tagesprüfung · {len(rows)} im Gesamtbestand</p><p>öffentlichevergabe.de: Veröffentlichungen bis {e(status["through"])}. Neue Veröffentlichungen erscheinen im Export am Folgetag. Automatische Vorauswahl; Angaben in den Originalunterlagen prüfen.</p>'+warning+'''<p><a href="optirent-ausschreibungen.xml">RSS-Feed abonnieren</a> · <a href="radar-status.json">Abrufstatus</a></p><label for="scope">Ansicht</label><select id="scope" aria-label="Anzeigebereich"><option value="new">Nur neue Ausschreibungen</option><option value="all">Alle aktiven Ausschreibungen</option></select><input id="search" aria-label="Treffer durchsuchen" placeholder="Titel, Ort oder Vergabestelle"><select id="rating" aria-label="Einstufung"><option value="">Alle Chancen</option><option>Passend</option><option>Prüfen</option></select><p id="count"></p>'''+cards+'''<footer>„Prüfen“ umfasst unklare Leistungen sowie Vorinformationen oder Einträge ohne gesicherte Frist. Ältere offene Bekanntmachungen vor dem erstmaligen Import können fehlen.</footer></main><script>const q=document.querySelector('#search'),s=document.querySelector('#rating'),scope=document.querySelector('#scope');function apply(){let n=0;for(const a of document.querySelectorAll('article')){a.hidden=!!((scope.value==='new'&&a.dataset.new!=='1')||(s.value&&a.dataset.rating!==s.value)||(q.value&&!a.textContent.toLocaleLowerCase('de').includes(q.value.toLocaleLowerCase('de'))));if(!a.hidden)n++}document.querySelector('#count').textContent=n?n+' Treffer':'Keine neuen Einträge für die gewählte Ansicht.'}q.addEventListener('input',apply);s.addEventListener('change',apply);scope.addEventListener('change',apply);apply();</script></html>''').encode('utf-8')
 
-def publish(state, rows, status, root):
+def publish(state, rows, status, root, seen_state):
     source_warning=('ACHTUNG: öffentlichevergabe.de ist nur bis zum '+str(status['through'])
                     +' vollständig importiert; service.bund.de ist aktuell.'
                     if status.get('ov_status')=='stale' else '')
     payloads={'docs/optirent-ausschreibungen.xml':rss_bytes(rows,dt.datetime.fromisoformat(status['updated_at']),source_warning),
-              'docs/index.html':page_html(rows,status),
+              'docs/index.html':page_html(rows,status,seen_state['new_guids']),
               'docs/radar-status.json':json.dumps(status,ensure_ascii=False,indent=2).encode(),
-              'data/radar-state.json':json.dumps(state,ensure_ascii=False,separators=(',',':')).encode()}
+              'data/radar-state.json':json.dumps(state,ensure_ascii=False,separators=(',',':')).encode(),
+              'data/radar-seen.json':json.dumps(seen_state,ensure_ascii=False,indent=2).encode()}
     # Render and validate everything before replacement. Workflow commits only on total success.
     with tempfile.TemporaryDirectory(dir=root) as staging:
         for i,(name,data) in enumerate(payloads.items()):
@@ -319,11 +337,23 @@ def run(root=Path('.'), bootstrap_cache=None):
     # If service.bund.de also fails, publish nothing.
     refresh_service(state,urls,now,root/'docs/optirent-ausschreibungen.xml')
     rows,merged=merge_rows(ov_rows(state,now),state['service'].values(),now)
+    seen_path=root/'data/radar-seen.json'
+    if seen_path.exists():
+        seen_state=json.loads(seen_path.read_text(encoding='utf-8'))
+    else:
+        # Existing published notices must not be sent as new during migration.
+        previous=feedparser.parse((root/'docs/optirent-ausschreibungen.xml').read_bytes()).entries if (root/'docs/optirent-ausschreibungen.xml').exists() else []
+        seen_state={'schema':1,'day':'','seen_guids':[e.get('id','') for e in previous if e.get('id')],'new_guids':[]}
+    today_new=track_new(seen_state,rows,now)
     status={'updated_at':now.isoformat(),'updated_at_display':now.strftime('%d.%m.%Y %H:%M %Z'),
             'through':state.get('last_day') or 'nicht verfügbar',
             'ov_target_through':through.isoformat(),'ov_status':'stale' if ov_error else 'complete',
             'ov_error':ov_error,
-            'bootstrap_since':'2026-09-01','items':len(rows),'passend':sum(r['rating']=='Passend' for r in rows),
+            'bootstrap_since':'2026-09-01','items':len(rows),
+            'new_items':sum(r['guid'] in today_new for r in rows),
+            'new_passend':sum(r['guid'] in today_new and r['rating']=='Passend' for r in rows),
+            'new_pruefen':sum(r['guid'] in today_new and r['rating']=='Prüfen' for r in rows),
+            'passend':sum(r['rating']=='Passend' for r in rows),
             'pruefen':sum(r['rating']=='Prüfen' for r in rows),
             'cross_source_duplicates_merged':merged,'sources':['service.bund.de','öffentlichevergabe.de'],
             'imports':imports,
@@ -331,7 +361,7 @@ def run(root=Path('.'), bootstrap_cache=None):
                            'Uncertain cross-source duplicates remain separate',
                            'Not all withdrawal notices carry explicit lot outcomes']
                            +(['öffentlichevergabe.de import is stale; verified watermark was preserved'] if ov_error else [])}
-    publish(state,rows,status,root)
+    publish(state,rows,status,root,seen_state)
     print(json.dumps(status,ensure_ascii=False,indent=2))
 
 if __name__=='__main__':
