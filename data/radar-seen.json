@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "day": "2026-11-13",
+  "day": "2026-11-14",
   "seen_guids": [
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a13d184c-239cde9d5f6a243e.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a6cc5120-7e891b8c92e4b97b.html",
@@ -21,6 +21,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7094091.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7094841.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/8a165e5e-4f6b-4356-846b-e6c11e397ca1.html",
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/a939ed7c-6a26-49f4-af7d-4553b4587f51.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/d0f0be8e-b3f1-47f5-a3bb-0443d00854c4.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/hessen/2026/11/002078006610.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/rlp-komm/2026/11/19160.html",
@@ -65,6 +66,10 @@
     "ov:26031478:LOT-0000",
     "ov:26031728:LOT-0000",
     "ov:26032164:LOT-0000",
+    "ov:26033594:LOT-0000",
+    "ov:26033648:LOT-0000",
+    "ov:26036716:LOT-0000",
+    "ov:26037174:LOT-0000",
     "ov:2a3be38a-b0e0-46cd-b591-c514dcc046f7:LOT-0001",
     "ov:2a50eb37-64f6-4385-b27a-f5c2e9237613:LOT-0001",
     "ov:2f850761-a1f1-4974-9f01-9c0370b0379c:LOT-0001",
@@ -87,6 +92,7 @@
     "ov:5fda3942-dc08-410c-9251-8b9ac0b2160c:LOT-0000",
     "ov:6029200d-aabc-489f-bb56-079bdc479298:LOT-0000",
     "ov:6253a7bf-68ae-4c72-868e-277d79dace17:LOT-0001",
+    "ov:66c91d10-2a39-4f68-b2c5-4bd1e999dd43:LOT-0000",
     "ov:69b6c069-803f-4803-98a5-0359634912c1:LOT-0001",
     "ov:69b6c069-803f-4803-98a5-0359634912c1:LOT-0002",
     "ov:69b6c069-803f-4803-98a5-0359634912c1:LOT-0003",
@@ -120,6 +126,7 @@
     "ov:9bd6ffe6-eacb-4d87-ab3d-5fb6804f0213:LOT-0001",
     "ov:9c57994c-dd32-4e60-9279-d3d057eda88f:LOT-0001",
     "ov:9c844c51-fff1-4539-a8c0-3d1f03383862:PAR-0001",
+    "ov:9cdcc3f1-e1cd-4571-b4f3-9d02e1155cbc:LOT-0000",
     "ov:9fe424eb-8e43-47be-848a-016f66fe56cb:LOT-0001",
     "ov:a1ea3674-c222-4637-8ff1-244b359fd6a6:LOT-0001",
     "ov:a46776ba-82d2-47e8-83b6-cd54341f8608:LOT-0001",
@@ -129,6 +136,7 @@
     "ov:b1cea137-8b3c-4e8f-899f-33d0e3f538e1:LOT-0000",
     "ov:b51008c9-50b7-45e3-a7bb-b56da622181f:LOT-0000",
     "ov:c494ac0a-d13e-471d-8ed2-89b7cd0bdd70:LOT-0000",
+    "ov:cb514dd9-bf6b-44f7-ae2e-4e1bf6e7eb85:LOT-0001",
     "ov:cfe2262a-e06e-4e74-9642-89d5b387422e:LOT-0001",
     "ov:d3e30040-e58c-4492-8821-370c58a7cf6a:LOT-0000",
     "ov:d519e908-7fb3-47b6-ad7d-31ed63cb44e5:LOT-0000",
@@ -140,14 +148,13 @@
     "ov:ffee114f-ac01-46ab-9aab-30cb8f6320ba:LOT-0000"
   ],
   "new_guids": [
-    "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7094841.html",
-    "https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/11/E69947548.html",
-    "ov:1aa87c32-db32-440b-bc68-14cc6b649ae4:LOT-0001",
-    "ov:26029630:LOT-0000",
-    "ov:26031478:LOT-0000",
-    "ov:26031728:LOT-0000",
-    "ov:26032164:LOT-0000",
-    "ov:5b64032f-0802-4c68-9d85-995276cbd586:LOT-0000",
-    "ov:9fe424eb-8e43-47be-848a-016f66fe56cb:LOT-0001"
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/a939ed7c-6a26-49f4-af7d-4553b4587f51.html",
+    "ov:26033594:LOT-0000",
+    "ov:26033648:LOT-0000",
+    "ov:26036716:LOT-0000",
+    "ov:26037174:LOT-0000",
+    "ov:66c91d10-2a39-4f68-b2c5-4bd1e999dd43:LOT-0000",
+    "ov:9cdcc3f1-e1cd-4571-b4f3-9d02e1155cbc:LOT-0000",
+    "ov:cb514dd9-bf6b-44f7-ae2e-4e1bf6e7eb85:LOT-0001"
   ]
 }
