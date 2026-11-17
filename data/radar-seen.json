@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "day": "2026-11-16",
+  "day": "2026-11-17",
   "seen_guids": [
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a13d184c-239cde9d5f6a243e.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a6cc5120-7e891b8c92e4b97b.html",
@@ -12,6 +12,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/Berliner-Stadtreinigungsbetriebe/2026/10/6683408.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/Landeshauptstadt-Hannover/2026/10/6667001.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/Landeshauptstadt-Hannover/2026/10/6667008.html",
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/Landeshauptstadt-Hannover/2026/11/6711567.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/10/7065368.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/10/7067925.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/10/7080246.html",
@@ -152,7 +153,6 @@
     "ov:ffee114f-ac01-46ab-9aab-30cb8f6320ba:LOT-0000"
   ],
   "new_guids": [
-    "ov:658b245b-31eb-4e65-877a-14dffc2dad0c:LOT-0000",
-    "ov:7a2c535c-acf4-4c63-85fa-184260b4897f:LOT-0002"
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/Landeshauptstadt-Hannover/2026/11/6711567.html"
   ]
 }
