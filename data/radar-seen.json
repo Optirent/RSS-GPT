@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "day": "2026-11-17",
+  "day": "2026-11-18",
   "seen_guids": [
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a13d184c-239cde9d5f6a243e.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a6cc5120-7e891b8c92e4b97b.html",
@@ -21,6 +21,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7092890.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7094091.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7094841.html",
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7097819.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/8a165e5e-4f6b-4356-846b-e6c11e397ca1.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/a939ed7c-6a26-49f4-af7d-4553b4587f51.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/d0f0be8e-b3f1-47f5-a3bb-0443d00854c4.html",
@@ -31,6 +32,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-bb/2026/11/262806.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-bb/2026/11/262887.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-gkd/2026/10/115781.html",
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-gkd/2026/11/116254.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-nds/2026/10/136338.html",
     "ov:0075db48-0f39-4822-9403-2d97223b0196:LOT-0000",
     "ov:01a18220-ce1b-4fc0-9d86-b673694cab35:LOT-0001",
@@ -71,6 +73,9 @@
     "ov:26033648:LOT-0000",
     "ov:26036716:LOT-0000",
     "ov:26037174:LOT-0000",
+    "ov:26044154:LOT-0000",
+    "ov:26044182:LOT-0000",
+    "ov:26044330:LOT-0000",
     "ov:2a3be38a-b0e0-46cd-b591-c514dcc046f7:LOT-0001",
     "ov:2a50eb37-64f6-4385-b27a-f5c2e9237613:LOT-0001",
     "ov:2f850761-a1f1-4974-9f01-9c0370b0379c:LOT-0001",
@@ -137,6 +142,7 @@
     "ov:a6fed95c-2db7-4359-80e8-7eaacef1f6b8:LOT-0000",
     "ov:a9dfcc3b-9306-43ac-896c-bd53def106a5:LOT-0001",
     "ov:aa6aff4e-3bd2-4e1c-9627-86d79fe8962c:LOT-0001",
+    "ov:af21dfb5-6ac7-496c-a1f6-541851313e5a:LOT-0000",
     "ov:b1cea137-8b3c-4e8f-899f-33d0e3f538e1:LOT-0000",
     "ov:b51008c9-50b7-45e3-a7bb-b56da622181f:LOT-0000",
     "ov:c494ac0a-d13e-471d-8ed2-89b7cd0bdd70:LOT-0000",
@@ -148,11 +154,18 @@
     "ov:dc147392-df33-43a8-b301-8cb7a57e9ddb:LOT-0001",
     "ov:dc9b6782-9331-4fd6-b5f5-235583095e6a:LOT-0001",
     "ov:e2c57071-a892-4b16-baee-cef9de039605:LOT-0000",
+    "ov:e409aa08-c4b6-48a8-9f84-bee8445acdb7:LOT-0001",
     "ov:ee846d08-3ec0-411b-ae72-171d8f909c1b:LOT-0001",
     "ov:fd4d6423-1432-4812-a5a2-ee6765985bb0:LOT-0001",
     "ov:ffee114f-ac01-46ab-9aab-30cb8f6320ba:LOT-0000"
   ],
   "new_guids": [
-    "https://www.service.bund.de/IMPORTE/Ausschreibungen/editor/Landeshauptstadt-Hannover/2026/11/6711567.html"
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7097819.html",
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-gkd/2026/11/116254.html",
+    "ov:26044154:LOT-0000",
+    "ov:26044182:LOT-0000",
+    "ov:26044330:LOT-0000",
+    "ov:af21dfb5-6ac7-496c-a1f6-541851313e5a:LOT-0000",
+    "ov:e409aa08-c4b6-48a8-9f84-bee8445acdb7:LOT-0001"
   ]
 }
