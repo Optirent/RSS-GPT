@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "day": "2026-11-19",
+  "day": "2026-11-20",
   "seen_guids": [
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a13d184c-239cde9d5f6a243e.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a6cc5120-7e891b8c92e4b97b.html",
@@ -22,7 +22,9 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7094091.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7094841.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7097819.html",
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7099112.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7099192.html",
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/868b0e14-6f38-4d7b-86ad-3934ca5541ef.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/8a165e5e-4f6b-4356-846b-e6c11e397ca1.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/a939ed7c-6a26-49f4-af7d-4553b4587f51.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/d0f0be8e-b3f1-47f5-a3bb-0443d00854c4.html",
@@ -44,6 +46,7 @@
     "ov:17db92d7-1507-498d-8f9f-30537617f33b:LOT-0000",
     "ov:1aa87c32-db32-440b-bc68-14cc6b649ae4:LOT-0001",
     "ov:1e75c950-5d24-4cb3-8241-b17f2053bf3c:LOT-0001",
+    "ov:205e2a4c-cbf5-4104-aa6b-e3e471018e5e:LOT-0001",
     "ov:210d7313-d7e2-46fa-84f4-eedf6e33c4d0:LOT-0001",
     "ov:23a6dd06-ec8c-4528-b55f-89fb1e2d4f04:LOT-0001",
     "ov:23fdd53f-db10-4252-be29-afef59885aad:LOT-0001",
@@ -83,6 +86,7 @@
     "ov:2a50eb37-64f6-4385-b27a-f5c2e9237613:LOT-0001",
     "ov:2f850761-a1f1-4974-9f01-9c0370b0379c:LOT-0001",
     "ov:38d7a957-2ca7-4865-aaed-1f1436846f48:LOT-0000",
+    "ov:3e78c319-55be-4152-8388-bc844ff04470:LOT-0001",
     "ov:408e7791-39e8-4175-a5a3-b0c10996c79d:LOT-0001",
     "ov:411f0632-24c2-4bb8-919a-579b77d65a17:LOT-0001",
     "ov:4285ff75-26a3-486a-99fd-f7df943e954b:LOT-0000",
@@ -133,6 +137,7 @@
     "ov:84fce2ca-bfda-47a4-a92d-44ec0aea50ee:LOT-0000",
     "ov:87694897-bdf7-438c-a566-ed16b2ec2432:LOT-0000",
     "ov:8b592038-7a3a-4cd1-a55d-89ed393d9908:LOT-0001",
+    "ov:8b9e4109-00bc-462f-8d37-f5b8e745e3b7:LOT-0001",
     "ov:953626b2-0fd5-40ab-8ddd-3d636fbf5a1b:LOT-0001",
     "ov:95bee63d-5ffd-4454-b3a7-9a908add099d:LOT-0001",
     "ov:99b224ea-585f-4caf-b7e1-78f7802c8115:LOT-0000",
@@ -150,6 +155,7 @@
     "ov:af21dfb5-6ac7-496c-a1f6-541851313e5a:LOT-0000",
     "ov:b1cea137-8b3c-4e8f-899f-33d0e3f538e1:LOT-0000",
     "ov:b51008c9-50b7-45e3-a7bb-b56da622181f:LOT-0000",
+    "ov:bd6a37bb-94f9-4a31-b137-cc159a88513f:LOT-0001",
     "ov:c494ac0a-d13e-471d-8ed2-89b7cd0bdd70:LOT-0000",
     "ov:cb514dd9-bf6b-44f7-ae2e-4e1bf6e7eb85:LOT-0001",
     "ov:cd73016f-857a-4d9f-bfb3-ab7ff7ca56d2:LOT-0001",
@@ -162,15 +168,17 @@
     "ov:e2c57071-a892-4b16-baee-cef9de039605:LOT-0000",
     "ov:e409aa08-c4b6-48a8-9f84-bee8445acdb7:LOT-0001",
     "ov:ee846d08-3ec0-411b-ae72-171d8f909c1b:LOT-0001",
+    "ov:f17b09ad-b024-4b0a-a68c-0aa71cb17441:LOT-0001",
     "ov:fd4d6423-1432-4812-a5a2-ee6765985bb0:LOT-0001",
     "ov:ffee114f-ac01-46ab-9aab-30cb8f6320ba:LOT-0000"
   ],
   "new_guids": [
-    "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7099192.html",
-    "ov:17db92d7-1507-498d-8f9f-30537617f33b:LOT-0000",
-    "ov:23fdd53f-db10-4252-be29-afef59885aad:LOT-0001",
-    "ov:6b74f560-b67f-44e7-9317-699a4b1c06de:LOT-0001",
-    "ov:84fce2ca-bfda-47a4-a92d-44ec0aea50ee:LOT-0000",
-    "ov:cd73016f-857a-4d9f-bfb3-ab7ff7ca56d2:LOT-0001"
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7099112.html",
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/868b0e14-6f38-4d7b-86ad-3934ca5541ef.html",
+    "ov:205e2a4c-cbf5-4104-aa6b-e3e471018e5e:LOT-0001",
+    "ov:3e78c319-55be-4152-8388-bc844ff04470:LOT-0001",
+    "ov:8b9e4109-00bc-462f-8d37-f5b8e745e3b7:LOT-0001",
+    "ov:bd6a37bb-94f9-4a31-b137-cc159a88513f:LOT-0001",
+    "ov:f17b09ad-b024-4b0a-a68c-0aa71cb17441:LOT-0001"
   ]
 }
