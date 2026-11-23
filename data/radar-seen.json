@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "day": "2026-11-22",
+  "day": "2026-11-23",
   "seen_guids": [
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a13d184c-239cde9d5f6a243e.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a6cc5120-7e891b8c92e4b97b.html",
@@ -49,6 +49,7 @@
     "ov:0cb71780-84e6-44ec-a33d-f8402d1feb9d:LOT-0000",
     "ov:17db92d7-1507-498d-8f9f-30537617f33b:LOT-0000",
     "ov:1aa87c32-db32-440b-bc68-14cc6b649ae4:LOT-0001",
+    "ov:1d44d3e4-4daf-4a90-b648-8bf12e95683a:LOT-0001",
     "ov:1e75c950-5d24-4cb3-8241-b17f2053bf3c:LOT-0001",
     "ov:205e2a4c-cbf5-4104-aa6b-e3e471018e5e:LOT-0001",
     "ov:210d7313-d7e2-46fa-84f4-eedf6e33c4d0:LOT-0001",
@@ -140,6 +141,7 @@
     "ov:7a2c535c-acf4-4c63-85fa-184260b4897f:LOT-0002",
     "ov:7a39f552-515d-4a0a-8c02-fb0b579f07c8:LOT-0001",
     "ov:7ae02cdd-f8ff-4669-b4a9-639b8c69eb5c:LOT-0000",
+    "ov:8063b203-dd0b-4b93-9729-21437d323f59:LOT-0001",
     "ov:84fce2ca-bfda-47a4-a92d-44ec0aea50ee:LOT-0000",
     "ov:87694897-bdf7-438c-a566-ed16b2ec2432:LOT-0000",
     "ov:8a52c72b-10a1-4237-8d93-3e7a990dcf31:LOT-0001",
@@ -167,6 +169,7 @@
     "ov:c494ac0a-d13e-471d-8ed2-89b7cd0bdd70:LOT-0000",
     "ov:cb514dd9-bf6b-44f7-ae2e-4e1bf6e7eb85:LOT-0001",
     "ov:cd73016f-857a-4d9f-bfb3-ab7ff7ca56d2:LOT-0001",
+    "ov:cea8b49b-14c8-4757-8d90-d11dd96dd15c:LOT-0001",
     "ov:cfe2262a-e06e-4e74-9642-89d5b387422e:LOT-0001",
     "ov:d3e30040-e58c-4492-8821-370c58a7cf6a:LOT-0000",
     "ov:d519e908-7fb3-47b6-ad7d-31ed63cb44e5:LOT-0000",
@@ -181,6 +184,8 @@
     "ov:ffee114f-ac01-46ab-9aab-30cb8f6320ba:LOT-0000"
   ],
   "new_guids": [
-    "ov:26071764:LOT-0000"
+    "ov:1d44d3e4-4daf-4a90-b648-8bf12e95683a:LOT-0001",
+    "ov:8063b203-dd0b-4b93-9729-21437d323f59:LOT-0001",
+    "ov:cea8b49b-14c8-4757-8d90-d11dd96dd15c:LOT-0001"
   ]
 }
