@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "day": "2026-11-23",
+  "day": "2026-11-24",
   "seen_guids": [
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a13d184c-239cde9d5f6a243e.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1a6cc5120-7e891b8c92e4b97b.html",
@@ -25,6 +25,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7099112.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7099192.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7102091.html",
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7104082.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/868b0e14-6f38-4d7b-86ad-3934ca5541ef.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/8a165e5e-4f6b-4356-846b-e6c11e397ca1.html",
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/8bb7b2ab-ef85-4ffe-b1ee-834cac6130e7.html",
@@ -184,8 +185,6 @@
     "ov:ffee114f-ac01-46ab-9aab-30cb8f6320ba:LOT-0000"
   ],
   "new_guids": [
-    "ov:1d44d3e4-4daf-4a90-b648-8bf12e95683a:LOT-0001",
-    "ov:8063b203-dd0b-4b93-9729-21437d323f59:LOT-0001",
-    "ov:cea8b49b-14c8-4757-8d90-d11dd96dd15c:LOT-0001"
+    "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7104082.html"
   ]
 }
