@@ -208,7 +208,7 @@
     "ov:8b592038-7a3a-4cd1-a55d-89ed393d9908:LOT-0001": {
       "key": "ov:8b592038-7a3a-4cd1-a55d-89ed393d9908:LOT-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "05ab148d54a210b5e8360180e5566e5176b8297689b7a017fa13d3fe19f38949"
       ],
@@ -1698,7 +1698,7 @@
     "ov:6253a7bf-68ae-4c72-868e-277d79dace17:LOT-0001": {
       "key": "ov:6253a7bf-68ae-4c72-868e-277d79dace17:LOT-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "8ae8e81c2eaf5ed51cf8caa14ae27265f2ac5aa9f6a69427dd4596aaeae3d4a7"
       ],
@@ -1731,7 +1731,7 @@
     "ov:0cb71780-84e6-44ec-a33d-f8402d1feb9d:LOT-0000": {
       "key": "ov:0cb71780-84e6-44ec-a33d-f8402d1feb9d:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "ae240ac63558d79ff7cb42e39d96a3af37169db20974242492b0386ac0e841a1"
       ],
@@ -1764,7 +1764,7 @@
     "ov:cfe2262a-e06e-4e74-9642-89d5b387422e:LOT-0001": {
       "key": "ov:cfe2262a-e06e-4e74-9642-89d5b387422e:LOT-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "309a75dd772c383622d5c212f270b84651fd5ce2f20a476f290fe8473a99b7fd"
       ],
@@ -1797,7 +1797,7 @@
     "ov:a1ea3674-c222-4637-8ff1-244b359fd6a6:LOT-0001": {
       "key": "ov:a1ea3674-c222-4637-8ff1-244b359fd6a6:LOT-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "25b07cc8785444f9840757ef1cf2fbcbade21a85684a4e49ea8362479151ebe1"
       ],
@@ -1830,7 +1830,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-bb/2026/11/262806.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-bb/2026/11/262806.html",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "5b2aca344ba944ff3edd6dc08be3e9e89fc1fdfb9287b8f63e8fc11313a57bda",
         "3621e71ac0023b422d4f043511c87f2eb5d11ff808bc986fb40c2224456b2ebe"
@@ -1861,7 +1861,7 @@
     "ov:38d7a957-2ca7-4865-aaed-1f1436846f48:LOT-0000": {
       "key": "ov:38d7a957-2ca7-4865-aaed-1f1436846f48:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "6da41423097f3743d7151d03bcb501f0124dea380c9b093642735017a37125ee"
       ],
@@ -1894,7 +1894,7 @@
     "ov:25987504:LOT-0000": {
       "key": "ov:25987504:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "e435e0b8cb1cb23c309be5db8fd7adcec2ea59359320a210bc0971b24fddc663"
       ],
@@ -1928,7 +1928,7 @@
     "ov:dc9b6782-9331-4fd6-b5f5-235583095e6a:LOT-0001": {
       "key": "ov:dc9b6782-9331-4fd6-b5f5-235583095e6a:LOT-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "fcbc8b432b2fea325832c5d2f473d9f95b73bf186e0c2c628d64ce66b19e84c1"
       ],
@@ -1961,7 +1961,7 @@
     "ov:4bd9181c-256e-4d1f-ac73-dd0bda6e1684:LOT-0001": {
       "key": "ov:4bd9181c-256e-4d1f-ac73-dd0bda6e1684:LOT-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "f3c8d4ee46ceb9500154c31d62d92b8e0ac1cc30a028423da0047cf9c9c35625"
       ],
@@ -1994,7 +1994,7 @@
     "ov:4bd9181c-256e-4d1f-ac73-dd0bda6e1684:LOT-0002": {
       "key": "ov:4bd9181c-256e-4d1f-ac73-dd0bda6e1684:LOT-0002",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "e93181a8e175d37966360791a36599c32ecff4e6e04a3cdc9c4254dbaaf1f83a"
       ],
@@ -2027,7 +2027,7 @@
     "ov:4bd9181c-256e-4d1f-ac73-dd0bda6e1684:LOT-0003": {
       "key": "ov:4bd9181c-256e-4d1f-ac73-dd0bda6e1684:LOT-0003",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "a9aa3448e321e6ea081998bf17ce447dd1202b0ccc0ad7ffc41fe45f3476a8f7"
       ],
@@ -2060,7 +2060,7 @@
     "ov:4bd9181c-256e-4d1f-ac73-dd0bda6e1684:LOT-0004": {
       "key": "ov:4bd9181c-256e-4d1f-ac73-dd0bda6e1684:LOT-0004",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "4bd177b84de9a6f8406253cdf28d28adfc9adff8f2090b20253e8551641a9166"
       ],
@@ -2093,7 +2093,7 @@
     "ov:d3e30040-e58c-4492-8821-370c58a7cf6a:LOT-0000": {
       "key": "ov:d3e30040-e58c-4492-8821-370c58a7cf6a:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "10644562a8e9784f39c1c4077a15074b384dd206a692a84a185892970ff1493f"
       ],
@@ -2126,7 +2126,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/aumass/2026/11/AV28F211.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/aumass/2026/11/AV28F211.html",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "0bdf594ba338c95da9245b7bd586d7b95e610268ae464979bf8235c251f6688d"
       ],
@@ -2156,7 +2156,7 @@
     "ov:2561d41f-74f2-4a6d-97f5-85887140de0c:LOT-0000": {
       "key": "ov:2561d41f-74f2-4a6d-97f5-85887140de0c:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "b16b1e7db5887529d878fb12dde6cf01f78f9d8259481b7a265adcce6c726937"
       ],
@@ -2223,7 +2223,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/11/E11231312.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/11/E11231312.html",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "7086a9d370fbf6a8a897295039fd9172454528f5472081e0cd7bdd42d9969360",
         "db0bec73e00ada7f12444f952afb50de8fed5f41cb61625a5faf3425604682a8"
@@ -2254,7 +2254,7 @@
     "ov:01a18220-ce1b-4fc0-9d86-b673694cab35:LOT-0001": {
       "key": "ov:01a18220-ce1b-4fc0-9d86-b673694cab35:LOT-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "63a389bf3454cf7d76086a1c9cd26023c1fba9aa0116bed3b6a21d1b7c5557f0"
       ],
@@ -2287,7 +2287,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7084581.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7084581.html",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "d88a52b4e9ab74ab7447f75fdd049f6ccb6e64228df0fe0eba08c742e5a37754"
       ],
@@ -2317,7 +2317,7 @@
     "ov:ffee114f-ac01-46ab-9aab-30cb8f6320ba:LOT-0000": {
       "key": "ov:ffee114f-ac01-46ab-9aab-30cb8f6320ba:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "573f124c50e79f31575d07d7643770201233e81d66829092e74849261fbc07a5"
       ],
@@ -2350,7 +2350,7 @@
     "ov:6cb067c9-20f1-4578-8282-f986c13ec2d8:LOT-0001": {
       "key": "ov:6cb067c9-20f1-4578-8282-f986c13ec2d8:LOT-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "600b1504e9af366dc158adf56533725ce9588b84a6a891575056a03df1055dc4"
       ],
@@ -2383,7 +2383,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/10/7080246.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/10/7080246.html",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "4582fb6b08c2250a69cdd633acdc04b21cb4342fd26555534e897d29da60745b"
       ],
@@ -2413,7 +2413,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/10/7065368.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/10/7065368.html",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "43efcf00cfbf89b37599db947b9c9d1abe866edb2577634f4c06b6fb045d1398"
       ],
@@ -2443,7 +2443,7 @@
     "ov:ee846d08-3ec0-411b-ae72-171d8f909c1b:LOT-0001": {
       "key": "ov:ee846d08-3ec0-411b-ae72-171d8f909c1b:LOT-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "582d286f57faf1a8dee16f50e679311e5f53058a2ddaec1006962455686240bc"
       ],
@@ -2476,7 +2476,7 @@
     "ov:1e75c950-5d24-4cb3-8241-b17f2053bf3c:LOT-0001": {
       "key": "ov:1e75c950-5d24-4cb3-8241-b17f2053bf3c:LOT-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "b8b465a8af492de9cc6bedab89042813d992b3075aaba16cb53ff89decf06902"
       ],
@@ -2509,7 +2509,7 @@
     "ov:25768504:LOT-0000": {
       "key": "ov:25768504:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "abb1e2f9fd6b057587fc7a9d4b500d279bff890f27b348832ecbcf9ea0e54032"
       ],
@@ -2542,7 +2542,7 @@
     "ov:25875810:LOT-0000": {
       "key": "ov:25875810:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "ef5aaf387efa7e7b5e57a4ca9dd0f7e9e088e76166ee70f0ca9f68e07c05af06"
       ],
@@ -2575,7 +2575,7 @@
     "ov:25806954:LOT-0000": {
       "key": "ov:25806954:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "6e36ff572a9c768abad9f459e00e12186ca28a60e8d63a679839fef927c202ff"
       ],
@@ -2608,7 +2608,7 @@
     "ov:9c844c51-fff1-4539-a8c0-3d1f03383862:PAR-0001": {
       "key": "ov:9c844c51-fff1-4539-a8c0-3d1f03383862:PAR-0001",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "8577b0dc9aa0bec084355def537fd1991b13575313ade2167381927c8262c6f8"
       ],
@@ -2641,7 +2641,7 @@
     "ov:25998578:LOT-0000": {
       "key": "ov:25998578:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "5138773dbec557b1f080101e4e10ab8b44ea1180460bc4f0efa71e2c28844ae6"
       ],
@@ -2674,7 +2674,7 @@
     "ov:25880270:LOT-0000": {
       "key": "ov:25880270:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "623667a6b6e3e99433374517a89161cc43408d436d439b19d3e6af98ee9dbcd1"
       ],
@@ -2707,7 +2707,7 @@
     "ov:25818078:LOT-0000": {
       "key": "ov:25818078:LOT-0000",
       "first_seen": "2026-11-06T06:02:40Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "07044ea155e0eadea4099f946c22bb2465b17a3b81be51bffd8176d7421b8b9e"
       ],
@@ -2812,7 +2812,7 @@
     "ov:4c881550-4cf1-4e53-837a-c6d8f98ae1d9:LOT-0000": {
       "key": "ov:4c881550-4cf1-4e53-837a-c6d8f98ae1d9:LOT-0000",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "d2f87bbbabc2091d9204b43f834188f009abed8271740cb4072a65118b518327"
       ],
@@ -2845,7 +2845,7 @@
     "ov:43dde13a-0f75-4e83-b0e7-747d9536587d:LOT-0000": {
       "key": "ov:43dde13a-0f75-4e83-b0e7-747d9536587d:LOT-0000",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "0bc6e6cec9792c9d4812a3b3e76f71024766dcd388135a8752bc7c522db46a9a"
       ],
@@ -2879,7 +2879,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0010": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0010",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "1ba52e9313711194c9ce0c89e317dde1c5967977e1c135594110808dccf2117a"
       ],
@@ -2912,7 +2912,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0011": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0011",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "c8c397cbdc1f72b36c90f7583287aa3d97a0938b3a016714bfec89092834c0a8"
       ],
@@ -2945,7 +2945,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0001": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0001",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "2adcdd0576cb14866e1c7dabd5bb2cb76061f52eae4a76354a6a5f34948566d4"
       ],
@@ -2978,7 +2978,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0002": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0002",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "2efdaa10b6e93adcddfef3ccb74e45a94f92079825844da5ae8b9faea4fa616e"
       ],
@@ -3011,7 +3011,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0003": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0003",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "ef6d864340dc8cfa366a7d42bbd5c0bdb1a5de017af21b8a7d6db2e4142e1ebc"
       ],
@@ -3044,7 +3044,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0004": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0004",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "119849be631f7eab562ed9476d00ed7acb91693454da0bdd34a87ed0b35fd3be"
       ],
@@ -3077,7 +3077,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0006": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0006",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "980976853be8db0ceb89e362f3d58c212b36dcf47b708253242bbb3e0cffb774"
       ],
@@ -3110,7 +3110,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0007": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0007",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "aed30ea74ec9723e13e4bebb031cb3ad5c01af83bd23b1f9ef846144b8938ecc"
       ],
@@ -3143,7 +3143,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0008": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0008",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "042a37a307e951306e3355763b030b6d686748669ea0368ba813ebf442c7f34a"
       ],
@@ -3176,7 +3176,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0009": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0009",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "1876dfc7493c449f6bf540239d0ad3101ce533e59d8271043b76835345b2c46e"
       ],
@@ -3209,7 +3209,7 @@
     "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0005": {
       "key": "ov:6cfc5e2d-ae7c-4c68-b31e-ae3fd7e984bd:LOT-0005",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "60b519f878fb778c8e5a0850a381aa43d6b4730cdf723cace683104f1932b30c"
       ],
@@ -3242,7 +3242,7 @@
     "ov:fd4d6423-1432-4812-a5a2-ee6765985bb0:LOT-0001": {
       "key": "ov:fd4d6423-1432-4812-a5a2-ee6765985bb0:LOT-0001",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "37e2912ec5ffa9bb1a3194c1976d4ada61f72d2be0f85ec67262666d9a055242"
       ],
@@ -3275,7 +3275,7 @@
     "ov:26013372:LOT-0000": {
       "key": "ov:26013372:LOT-0000",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "e58aec518b0e9e75c5d0933cf67c85e8a04737dc62f4b1e48bbde53967b4df83"
       ],
@@ -3308,7 +3308,7 @@
     "ov:26012286:LOT-0000": {
       "key": "ov:26012286:LOT-0000",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "0483ac837d3ef33ee7cafa73b073cb423990a95c71bb7d18f0eecf888ecf4f0f"
       ],
@@ -3341,7 +3341,7 @@
     "ov:26009212:LOT-0000": {
       "key": "ov:26009212:LOT-0000",
       "first_seen": "2026-11-07T05:41:19Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "ad7241a43027f037844ddae57d5011292ade8ccb74e0b8925637254b86af4b3a"
       ],
@@ -3408,7 +3408,7 @@
     "ov:26014748:LOT-0000": {
       "key": "ov:26014748:LOT-0000",
       "first_seen": "2026-11-09T05:57:30Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "757a3f32cee3a75d523399147bfda63b400d045d3616e2c16305d751e0af29a7"
       ],
@@ -3441,7 +3441,7 @@
     "ov:481a4aa8-b6fe-4eb8-b648-5b1e780f9556:LOT-0001": {
       "key": "ov:481a4aa8-b6fe-4eb8-b648-5b1e780f9556:LOT-0001",
       "first_seen": "2026-11-09T05:57:30Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "c5f6cebacc9fc44e48c48b631f426ef8e1d4ef721ddf48d0eb44d33465fb5a4b"
       ],
@@ -3474,7 +3474,7 @@
     "ov:481a4aa8-b6fe-4eb8-b648-5b1e780f9556:LOT-0002": {
       "key": "ov:481a4aa8-b6fe-4eb8-b648-5b1e780f9556:LOT-0002",
       "first_seen": "2026-11-09T05:57:30Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "fd9962035ea769f32391a9948c67a0b7bb1c95e3f346d45e145c1e9a88a7ab3e"
       ],
@@ -3507,7 +3507,7 @@
     "ov:26017050:LOT-0000": {
       "key": "ov:26017050:LOT-0000",
       "first_seen": "2026-11-09T05:57:30Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "b15757a77f0e34c7ae17ed58756bf36ec2740980a19de72c8d0ca1d196df9bc1"
       ],
@@ -3540,7 +3540,7 @@
     "ov:9bd6ffe6-eacb-4d87-ab3d-5fb6804f0213:LOT-0001": {
       "key": "ov:9bd6ffe6-eacb-4d87-ab3d-5fb6804f0213:LOT-0001",
       "first_seen": "2026-11-09T05:57:30Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "9f4178a15cd6a5b4da464b9140b016bc881f367fd649fcc5cbe4a18a7c5d6451"
       ],
@@ -3573,7 +3573,7 @@
     "ov:9b16d008-a5dc-4cdc-b727-6cabf6c07ba1:LOT-0000": {
       "key": "ov:9b16d008-a5dc-4cdc-b727-6cabf6c07ba1:LOT-0000",
       "first_seen": "2026-11-09T05:57:30Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "93b411b6a97112eb4c0832eda9f610a96c63f06dd507520a38828abffd5421cd"
       ],
@@ -3606,7 +3606,7 @@
     "ov:1017f361-b6da-49e1-a9df-780cd8414f1d:LOT-0001": {
       "key": "ov:1017f361-b6da-49e1-a9df-780cd8414f1d:LOT-0001",
       "first_seen": "2026-11-09T05:57:30Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "755da439f78b5f574284da6453a69dde00ca54165b3de28a5436d011e3eeaa87"
       ],
@@ -3640,7 +3640,7 @@
     "ov:aa6aff4e-3bd2-4e1c-9627-86d79fe8962c:LOT-0001": {
       "key": "ov:aa6aff4e-3bd2-4e1c-9627-86d79fe8962c:LOT-0001",
       "first_seen": "2026-11-09T05:57:30Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "e7830cfbb56583ccc165913bbb02e478eaa66ea0159a19dc4dab766f9c526e47"
       ],
@@ -3673,7 +3673,7 @@
     "ov:26024460:LOT-0000": {
       "key": "ov:26024460:LOT-0000",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "929c47a651947fe893d54e6b6bacea9bb8e40ff0399e4fa5646c7db0744382e2"
       ],
@@ -3777,7 +3777,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-dabl/2026/11/54321-Tender-1a1caa66d68-68c7f8ea698d56ca.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-dabl/2026/11/54321-Tender-1a1caa66d68-68c7f8ea698d56ca.html",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "27cfae906fa9e18cb1d141a423d00d6f422f6ca4d3a9c1abaa118c8b2024dfff",
         "0030ba2158abd7ea2059f62531896b80241aaf1af7332d103047e79227a29562"
@@ -3812,7 +3812,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1c9ff98c7-27f89910d3ef7577.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/ai-ag-prod/2026/11/54321-Tender-1a1c9ff98c7-27f89910d3ef7577.html",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "799620746abae7a9b211f6909b145d53bfe0e0d946d2b574a930678c15829853"
       ],
@@ -3842,7 +3842,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7092890.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7092890.html",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "9f685528dbed5a21490c6217c91b16fc988f11c255643ca2b32072e69a0516ba",
         "ce227ffd6af0cb5326e7f76b7c421466ef4b02b4e4ca6da33b48bd9c40c6ac9f"
@@ -3877,7 +3877,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7094091.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7094091.html",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "e7c591b4569c24ab8d53a7fee4cfc4af66f2f063f246e321a685f9551cc5507c",
         "55fcaf9f8d74f504faa7eba84e0cd8741ba2fd550949bf35bcc09b0d01bd6801"
@@ -3912,7 +3912,7 @@
     "ov:2a3be38a-b0e0-46cd-b591-c514dcc046f7:LOT-0001": {
       "key": "ov:2a3be38a-b0e0-46cd-b591-c514dcc046f7:LOT-0001",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "8aaca274a7e36e72e0a7f79b60fcf90109ae336363b0a640e1ec6fee693f82de"
       ],
@@ -3945,7 +3945,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/hessen/2026/11/002078006610.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/hessen/2026/11/002078006610.html",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "390326e3937e7fda2b3116b717af1ae17082d6020d3d66347f3b650d9190fbaf"
       ],
@@ -3975,7 +3975,7 @@
     "ov:6b200190-4f60-4ee9-9b25-c408a011c8db:LOT-0001": {
       "key": "ov:6b200190-4f60-4ee9-9b25-c408a011c8db:LOT-0001",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "03a11cb4b219758f79f1df841ddf4a4d0f1b5371b74927ac7e48a288f13f37bf"
       ],
@@ -4008,7 +4008,7 @@
     "ov:534f7359-95c7-48b2-9564-4f1dc6287ec5:LOT-0000": {
       "key": "ov:534f7359-95c7-48b2-9564-4f1dc6287ec5:LOT-0000",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "1984772d4b7dac0f5d8dff4882c9ada122862bf92deae7c52432a9fc26a5a03b"
       ],
@@ -4041,7 +4041,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7092486.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7092486.html",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "1410ced7dc0b65ed5a323fe2d94dab9f6d7b4e1d4717fb8b0eb56b67dc0a3ccc"
       ],
@@ -4071,7 +4071,7 @@
     "ov:953626b2-0fd5-40ab-8ddd-3d636fbf5a1b:LOT-0001": {
       "key": "ov:953626b2-0fd5-40ab-8ddd-3d636fbf5a1b:LOT-0001",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "a705d863ca06597480e716d6e92ec930111f090cd04beb34bba1285b9dd1d695"
       ],
@@ -4104,7 +4104,7 @@
     "ov:a46776ba-82d2-47e8-83b6-cd54341f8608:LOT-0001": {
       "key": "ov:a46776ba-82d2-47e8-83b6-cd54341f8608:LOT-0001",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "6f42afd7ddc1b48df94d0d1d3e137cc218e766c83567b4d9d6fe837e9e2a7f37"
       ],
@@ -4137,7 +4137,7 @@
     "ov:c494ac0a-d13e-471d-8ed2-89b7cd0bdd70:LOT-0000": {
       "key": "ov:c494ac0a-d13e-471d-8ed2-89b7cd0bdd70:LOT-0000",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "d773c8b7681783a2f6266c65ef1616aa166dd9c8cbcdff12770b867572164496"
       ],
@@ -4170,7 +4170,7 @@
     "ov:0702e57e-931f-43b0-88e2-b54f687fafb0:LOT-0001": {
       "key": "ov:0702e57e-931f-43b0-88e2-b54f687fafb0:LOT-0001",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "fc05f0d1a4f5ca8930456e59bac17372134bdab9d5075a1a072f89624b14407c"
       ],
@@ -4203,7 +4203,7 @@
     "ov:26019574:LOT-0000": {
       "key": "ov:26019574:LOT-0000",
       "first_seen": "2026-11-12T05:53:42Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "3e5e823806be38b1608d770e390a7fdbd1acec8ddf1f61cd3b4f105cc3a5d477"
       ],
@@ -4236,7 +4236,7 @@
     "ov:26031728:LOT-0000": {
       "key": "ov:26031728:LOT-0000",
       "first_seen": "2026-11-13T05:52:44Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "6df9622c6a7533d9401d46737233c569407ab33615f1e32cb255da7569049224"
       ],
@@ -4269,7 +4269,7 @@
     "ov:26029630:LOT-0000": {
       "key": "ov:26029630:LOT-0000",
       "first_seen": "2026-11-13T05:52:44Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "2a9fd2a752419e3c0ae725866bb14a8d7d21ea547ec108e1758c3104b42bab7c"
       ],
@@ -4302,7 +4302,7 @@
     "ov:26031478:LOT-0000": {
       "key": "ov:26031478:LOT-0000",
       "first_seen": "2026-11-13T05:52:44Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "d6b7e1e029c2a8537e47e7f9f56e0cdeeb0cbb2c591af4a760ba64aecca63882"
       ],
@@ -4335,7 +4335,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/11/E69947548.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/subreport/2026/11/E69947548.html",
       "first_seen": "2026-11-13T05:52:44Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "42e41108acdef243878c2ae69184013a3e4881fc30ebe85aaccb6ec44a27dee6"
       ],
@@ -4365,7 +4365,7 @@
     "ov:26032164:LOT-0000": {
       "key": "ov:26032164:LOT-0000",
       "first_seen": "2026-11-13T05:52:44Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "aad1354387cf950e2c4d57598691c959db772bbe39f7617b7e2caf62dfabdbc1"
       ],
@@ -4398,7 +4398,7 @@
     "ov:9fe424eb-8e43-47be-848a-016f66fe56cb:LOT-0001": {
       "key": "ov:9fe424eb-8e43-47be-848a-016f66fe56cb:LOT-0001",
       "first_seen": "2026-11-13T05:52:44Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "74250bcb557d439b2f367e45d8c59f17aee9d99a1515578b0ba5babb19f41ef1"
       ],
@@ -4431,7 +4431,7 @@
     "ov:1aa87c32-db32-440b-bc68-14cc6b649ae4:LOT-0001": {
       "key": "ov:1aa87c32-db32-440b-bc68-14cc6b649ae4:LOT-0001",
       "first_seen": "2026-11-13T05:52:44Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "f279796da1b157c7e918688c716f123f06389bc2f91b893f15201ab2cb7895ad"
       ],
@@ -4464,7 +4464,7 @@
     "ov:4e29d2fe-a184-4617-a80c-61183d3d17ef:LOT-0000": {
       "key": "ov:4e29d2fe-a184-4617-a80c-61183d3d17ef:LOT-0000",
       "first_seen": "2026-11-13T05:52:44Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "dd551ee0609ba7dbfc81f50846f29c92204fdcbbf5832c918dae71d6367cb2f2"
       ],
@@ -4498,7 +4498,7 @@
     "ov:5b64032f-0802-4c68-9d85-995276cbd586:LOT-0000": {
       "key": "ov:5b64032f-0802-4c68-9d85-995276cbd586:LOT-0000",
       "first_seen": "2026-11-13T05:52:44Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "7de47149a79c53d0d65b1c5b3f45b5b613a24f27daabd454783d35c5ef7aebe8"
       ],
@@ -4531,7 +4531,7 @@
     "ov:26033594:LOT-0000": {
       "key": "ov:26033594:LOT-0000",
       "first_seen": "2026-11-14T05:43:32Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "762d1fabcac87c3652f10d966882b9ea2041574d4384768d40163e07a9653483"
       ],
@@ -4564,7 +4564,7 @@
     "ov:26036716:LOT-0000": {
       "key": "ov:26036716:LOT-0000",
       "first_seen": "2026-11-14T05:43:32Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "127f941c392ff4f236893571af7e8b00dfaf2db78cda7a351d4cff419fcdd9bd"
       ],
@@ -4597,7 +4597,7 @@
     "ov:9cdcc3f1-e1cd-4571-b4f3-9d02e1155cbc:LOT-0000": {
       "key": "ov:9cdcc3f1-e1cd-4571-b4f3-9d02e1155cbc:LOT-0000",
       "first_seen": "2026-11-14T05:43:32Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "4d6449d58133ad6f723e99bca1b45a38c34a2976bb5840d98a86fc7107f35072"
       ],
@@ -4630,7 +4630,7 @@
     "ov:26037174:LOT-0000": {
       "key": "ov:26037174:LOT-0000",
       "first_seen": "2026-11-14T05:43:32Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "b90563084b75ac8e75ee47bae20cc4dad8ee5b9713db9e72dbf773490fa8f68a"
       ],
@@ -4663,7 +4663,7 @@
     "ov:26033648:LOT-0000": {
       "key": "ov:26033648:LOT-0000",
       "first_seen": "2026-11-14T05:43:32Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "54536d951fdf234693232de112347fec48b86c23ff993c3cc1a80c02d6fc6412"
       ],
@@ -4696,7 +4696,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/a939ed7c-6a26-49f4-af7d-4553b4587f51.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/a939ed7c-6a26-49f4-af7d-4553b4587f51.html",
       "first_seen": "2026-11-14T05:43:32Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "eddbc6dc1fbc966f96027fcbad3e41d6fed060000665e375366e1e047994765b",
         "dd083d3137c2fd5c4d3b7793c3e6181e6be9c206d2dee868643813ad3389d2f1"
@@ -4731,7 +4731,7 @@
     "ov:cb514dd9-bf6b-44f7-ae2e-4e1bf6e7eb85:LOT-0001": {
       "key": "ov:cb514dd9-bf6b-44f7-ae2e-4e1bf6e7eb85:LOT-0001",
       "first_seen": "2026-11-14T05:43:32Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "969adf193be8daaaa9c01ce8202d89b4b962664d9fd509d8c8df43e70b2264cb"
       ],
@@ -4764,7 +4764,7 @@
     "ov:66c91d10-2a39-4f68-b2c5-4bd1e999dd43:LOT-0000": {
       "key": "ov:66c91d10-2a39-4f68-b2c5-4bd1e999dd43:LOT-0000",
       "first_seen": "2026-11-14T05:43:32Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "41ccb9b1d098d19c6702a50c0be8318b1d6f291dbd2af149042b0d787ef759df"
       ],
@@ -4797,7 +4797,7 @@
     "ov:dc147392-df33-43a8-b301-8cb7a57e9ddb:LOT-0001": {
       "key": "ov:dc147392-df33-43a8-b301-8cb7a57e9ddb:LOT-0001",
       "first_seen": "2026-11-15T05:45:49Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "4c0210257aafa83913d5aae6536ec8dd0abf072fe85c98fbd1bef2e82415cf7b"
       ],
@@ -4830,7 +4830,7 @@
     "ov:7a39f552-515d-4a0a-8c02-fb0b579f07c8:LOT-0001": {
       "key": "ov:7a39f552-515d-4a0a-8c02-fb0b579f07c8:LOT-0001",
       "first_seen": "2026-11-15T05:45:49Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "ff31dcb13ea6a1a8f02286cb8fe561434cf52d8144082da30dd3f7943a36003b"
       ],
@@ -4863,7 +4863,7 @@
     "ov:658b245b-31eb-4e65-877a-14dffc2dad0c:LOT-0000": {
       "key": "ov:658b245b-31eb-4e65-877a-14dffc2dad0c:LOT-0000",
       "first_seen": "2026-11-16T06:00:57Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "2308a20d3581e96d71236c0cf97700c870740d388eef326186143bee68bca275"
       ],
@@ -4896,7 +4896,7 @@
     "ov:7a2c535c-acf4-4c63-85fa-184260b4897f:LOT-0002": {
       "key": "ov:7a2c535c-acf4-4c63-85fa-184260b4897f:LOT-0002",
       "first_seen": "2026-11-16T06:00:57Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "0a501640470af7c6c02a71bc3a7c0d628bf4544981158b0ded382cd4ac3e479a"
       ],
@@ -4929,7 +4929,7 @@
     "ov:26043018:LOT-0000": {
       "key": "ov:26043018:LOT-0000",
       "first_seen": "2026-11-17T05:54:50Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "84439d3a860dfa9f4a9044964e21a9b7876d56076dfd3793dc4d649d69342eba"
       ],
@@ -4963,7 +4963,7 @@
     "ov:26044182:LOT-0000": {
       "key": "ov:26044182:LOT-0000",
       "first_seen": "2026-11-18T05:56:31Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "c4f16d3dfdeeda4d2f2b8acfd396d3031fe1cd0f16e252ed5922f1012b2f0e6f"
       ],
@@ -5030,7 +5030,7 @@
     "ov:26044154:LOT-0000": {
       "key": "ov:26044154:LOT-0000",
       "first_seen": "2026-11-18T05:56:31Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "6b22ae8dba338b3b5b74dda4f431bf46b2925dc1b6e111ddb0ec4dfe3c1c8eaf"
       ],
@@ -5063,7 +5063,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7097819.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7097819.html",
       "first_seen": "2026-11-18T05:56:31Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "3e6d2e0b95d83e5e52c3defdb084ae7069096c05115e48b47f393a51f0606f65",
         "164e881e55269d712b5103be12964ec61b858a83cca36f7e4099a276e3fff51c"
@@ -5098,7 +5098,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-gkd/2026/11/116254.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/vmp-gkd/2026/11/116254.html",
       "first_seen": "2026-11-18T05:56:31Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "2f7153f42596e8c0e5dd2b4f46c995bc7f9f1ac6617d8ee9c9f7a73bb4f011ee"
       ],
@@ -5128,7 +5128,7 @@
     "ov:af21dfb5-6ac7-496c-a1f6-541851313e5a:LOT-0000": {
       "key": "ov:af21dfb5-6ac7-496c-a1f6-541851313e5a:LOT-0000",
       "first_seen": "2026-11-18T05:56:31Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "a2343910c591270ab7a9fdee1012c0b9eedde335c45344062cf081b930d9b23c"
       ],
@@ -5161,7 +5161,7 @@
     "ov:e409aa08-c4b6-48a8-9f84-bee8445acdb7:LOT-0001": {
       "key": "ov:e409aa08-c4b6-48a8-9f84-bee8445acdb7:LOT-0001",
       "first_seen": "2026-11-18T05:56:31Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "00714a6e99ac78c407b89d397fd2b1ccd468c565e1aa0bbd284054c8c450f272"
       ],
@@ -5194,7 +5194,7 @@
     "ov:23fdd53f-db10-4252-be29-afef59885aad:LOT-0001": {
       "key": "ov:23fdd53f-db10-4252-be29-afef59885aad:LOT-0001",
       "first_seen": "2026-11-19T05:55:36Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "128380fdc55b614cbd40379ccf9e36e234236698af47fccba12fccabeef5bdde"
       ],
@@ -5227,7 +5227,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7099192.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7099192.html",
       "first_seen": "2026-11-19T05:55:36Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "b2e805c7244bced244f999ff28a08aa23f86f543198c4ec388e3c56d9fcdad9f",
         "af7a198d69dfd80a5edb4463018ca4fd702c30718357c0c2da74183a73004c4d"
@@ -5262,7 +5262,7 @@
     "ov:84fce2ca-bfda-47a4-a92d-44ec0aea50ee:LOT-0000": {
       "key": "ov:84fce2ca-bfda-47a4-a92d-44ec0aea50ee:LOT-0000",
       "first_seen": "2026-11-19T05:55:36Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "0cac73c8db56c55f8b3a6f3af47af37094bfd883e05fef4a9c6145080d172ef7"
       ],
@@ -5295,7 +5295,7 @@
     "ov:6b74f560-b67f-44e7-9317-699a4b1c06de:LOT-0001": {
       "key": "ov:6b74f560-b67f-44e7-9317-699a4b1c06de:LOT-0001",
       "first_seen": "2026-11-19T05:55:36Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "7fce46bbbd0792a946182f773db9bc69f4437508cdb58e8e81a8c4bc2f991a24"
       ],
@@ -5328,7 +5328,7 @@
     "ov:17db92d7-1507-498d-8f9f-30537617f33b:LOT-0000": {
       "key": "ov:17db92d7-1507-498d-8f9f-30537617f33b:LOT-0000",
       "first_seen": "2026-11-19T05:55:36Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "88ebe5de1004fbb6e62ca352666bdd5edc5acdaf6cfd606ecd8da8f574d93a61"
       ],
@@ -5395,7 +5395,7 @@
     "ov:bd6a37bb-94f9-4a31-b137-cc159a88513f:LOT-0001": {
       "key": "ov:bd6a37bb-94f9-4a31-b137-cc159a88513f:LOT-0001",
       "first_seen": "2026-11-20T05:56:27Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "b3c4ee6e5f2dea8fb3e88d4df4d771d581c80aea2405bfffaedb14614cb0ab45"
       ],
@@ -5428,7 +5428,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7099112.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7099112.html",
       "first_seen": "2026-11-20T05:56:27Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "31aaaed9972e3da74068cf769a57ed40d7d8fa5095331a7492b7f5c333a58483",
         "3adc86f6bfc06c71d0162c71f62275cec24ce4cc7f9a43d8ed53feead62c52cc"
@@ -5463,7 +5463,7 @@
     "ov:205e2a4c-cbf5-4104-aa6b-e3e471018e5e:LOT-0001": {
       "key": "ov:205e2a4c-cbf5-4104-aa6b-e3e471018e5e:LOT-0001",
       "first_seen": "2026-11-20T05:56:27Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "b42bc5805fb8bcd3a3c107e535fddb2867e26276efc269e0dc00d1670e1fafee"
       ],
@@ -5496,7 +5496,7 @@
     "ov:8b9e4109-00bc-462f-8d37-f5b8e745e3b7:LOT-0001": {
       "key": "ov:8b9e4109-00bc-462f-8d37-f5b8e745e3b7:LOT-0001",
       "first_seen": "2026-11-20T05:56:27Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "cbd169ba7b41a3ae777e70332b7ee24d85a54f17b5875e4653f98216e52ab238"
       ],
@@ -5529,7 +5529,7 @@
     "ov:f17b09ad-b024-4b0a-a68c-0aa71cb17441:LOT-0001": {
       "key": "ov:f17b09ad-b024-4b0a-a68c-0aa71cb17441:LOT-0001",
       "first_seen": "2026-11-20T05:56:27Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "7dee288560155fa5ef426c5457460f85448284e168aa24d57bf5fa8f4bb1972a"
       ],
@@ -5562,7 +5562,7 @@
     "ov:3e78c319-55be-4152-8388-bc844ff04470:LOT-0001": {
       "key": "ov:3e78c319-55be-4152-8388-bc844ff04470:LOT-0001",
       "first_seen": "2026-11-20T05:56:27Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "6ed2bc82fd5aa285ce78fc1e95382b0c0836a704550618aa2aa971f601bf1039"
       ],
@@ -5626,7 +5626,7 @@
     "ov:26067414:LOT-0000": {
       "key": "ov:26067414:LOT-0000",
       "first_seen": "2026-11-21T05:50:05Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "090e2e9c5fb176e5ad311b13205dda1c70d594305963f39def21ce9437f22416"
       ],
@@ -5659,7 +5659,7 @@
     "ov:a199666c-bc31-4331-9380-56932af42463:LOT-0001": {
       "key": "ov:a199666c-bc31-4331-9380-56932af42463:LOT-0001",
       "first_seen": "2026-11-21T05:50:05Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "82f997905f1d2cd30e0afc60d80c2af6e6d0379d3ae20870c5e7fd7e156e44af"
       ],
@@ -5692,7 +5692,7 @@
     "ov:0a86ad30-bbda-4492-9441-b1ccb350a874:LOT-0000": {
       "key": "ov:0a86ad30-bbda-4492-9441-b1ccb350a874:LOT-0000",
       "first_seen": "2026-11-21T05:50:05Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "9e7ec3c4c4f63da75c64ab07a3cd4769ebcb70cd797229058678cb56e24bef35"
       ],
@@ -5725,7 +5725,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7102091.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7102091.html",
       "first_seen": "2026-11-21T05:50:05Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "9aa886fddbae2b19bfe56daf1c9bfd8804b397c6a4d79a43ef1c7ed78690d6c8",
         "3127f8c78f4d69005ab34040e44adea70356a5fe0410c6fb98069c8af3aadf3b"
@@ -5760,7 +5760,7 @@
     "ov:8a52c72b-10a1-4237-8d93-3e7a990dcf31:LOT-0001": {
       "key": "ov:8a52c72b-10a1-4237-8d93-3e7a990dcf31:LOT-0001",
       "first_seen": "2026-11-21T05:50:05Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "b1c43414927b90fb996dafa7fbabc2876bc00182218b4d76a49647bdc585ab98"
       ],
@@ -5793,7 +5793,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/bfabadb1-b2d4-4668-a2cc-321f284ebc78.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/bfabadb1-b2d4-4668-a2cc-321f284ebc78.html",
       "first_seen": "2026-11-21T05:50:05Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "d8865c09b2f7a1b3852d3c146eab383af564be08f884ece6f0a44c50cec4034f",
         "c4b1af72a47c5bea423c6f91bb0525e1c1db273a7bafa4f64657886900cd3a53"
@@ -5828,7 +5828,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/8bb7b2ab-ef85-4ffe-b1ee-834cac6130e7.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/healyhudson/2026/11/8bb7b2ab-ef85-4ffe-b1ee-834cac6130e7.html",
       "first_seen": "2026-11-21T05:50:05Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "ea330b6d30b266eeb2e6186a2bbf8693225123be4e1af88ff75eb3e92ffc1b36",
         "a7a1fd90d61a4f7f819da156108dca03779d8738b57fcd3b82a33bd45eb48a56"
@@ -5863,7 +5863,7 @@
     "ov:26071764:LOT-0000": {
       "key": "ov:26071764:LOT-0000",
       "first_seen": "2026-11-22T05:51:39Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "e3968381c12ede9e7f685d126adfeea062370eb9bde5e81f46413c6149f3f271"
       ],
@@ -5896,7 +5896,7 @@
     "ov:1d44d3e4-4daf-4a90-b648-8bf12e95683a:LOT-0001": {
       "key": "ov:1d44d3e4-4daf-4a90-b648-8bf12e95683a:LOT-0001",
       "first_seen": "2026-11-23T05:58:13Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "24ba62e475a47c6692770ee4ec5e123d71c522de7c6fb0c3d263d7b1b4b76940",
         "c07bcd3c77ed37ec5bed3e6c2050bcb872c55fdbc52611ff01180465090a99e3"
@@ -5932,7 +5932,7 @@
     "ov:cea8b49b-14c8-4757-8d90-d11dd96dd15c:LOT-0001": {
       "key": "ov:cea8b49b-14c8-4757-8d90-d11dd96dd15c:LOT-0001",
       "first_seen": "2026-11-23T05:58:13Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "efecb4f96bf368f188f7bc7b455432c6abd0dab07caab5420286c3ea667cd7bd"
       ],
@@ -5965,7 +5965,7 @@
     "ov:8063b203-dd0b-4b93-9729-21437d323f59:LOT-0001": {
       "key": "ov:8063b203-dd0b-4b93-9729-21437d323f59:LOT-0001",
       "first_seen": "2026-11-23T05:58:13Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "8ac417feaf9089a07bb7d7c25520228a746b5e9c8159e63b8250059c522b94db"
       ],
@@ -5998,7 +5998,7 @@
     "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7104082.html": {
       "key": "https://www.service.bund.de/IMPORTE/Ausschreibungen/evergabede/2026/11/7104082.html",
       "first_seen": "2026-11-24T05:55:09Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "8892d0faa73d641822853bdd5ca751b2f3ad08b92aef82086118022d9d5b003d",
         "beec3547663f44188cabad5ed4b0c6b6928d5c59e07befb70e27761370162df2"
@@ -6033,7 +6033,7 @@
     "ov:26074342:LOT-0000": {
       "key": "ov:26074342:LOT-0000",
       "first_seen": "2026-11-25T05:56:05Z",
-      "last_seen": "2026-11-25T10:19:28.988151+01:00",
+      "last_seen": "2026-11-25T10:21:22.562265+01:00",
       "event_ids": [
         "57d858aaf0f0e3fc0d1913376dffc2aaf402af8ce9ea76de5f5e9387f8d68c99"
       ],
@@ -20204,6 +20204,16 @@
     {
       "id": "feed:8aa3e26c31a3bc077a467636b07c9eb2069d683c02ab0c2490156af6def6fd72",
       "observed_at": "2026-11-25T10:19:28.988151+01:00",
+      "day": "2026-11-25",
+      "entries": 124,
+      "ov_status": "complete",
+      "through": "2026-11-24",
+      "ted_status": "stale",
+      "ted_through": null
+    },
+    {
+      "id": "feed:b16c414ee6fd9749d09b2443ee8a28f0dc1e9a5534c8142f1f6ac6d0754bff60",
+      "observed_at": "2026-11-25T10:21:22.562265+01:00",
       "day": "2026-11-25",
       "entries": 124,
       "ov_status": "complete",
