@@ -1,5 +1,9 @@
 # OPTIRENT Ausschreibungsradar
 
+Seit 25.11.2026 ergänzen eine persistente Bekanntmachungs-/Los-Historie und eine
+Tagesdatei mit dauerhaft offenen Meldungen den RSS-Feed. Datenvertrag, Migration,
+Meldebestätigungen und Grenzen stehen in [HISTORY.md](HISTORY.md).
+
 Der tägliche Workflow führt `radar.py` aus. Er kombiniert die bestehenden
 service.bund.de-Suchfeeds aus `config.ini` mit der amtlichen Open-Data-Schnittstelle
 von öffentlichevergabe.de. Die bisherige RSS-Adresse bleibt erhalten:

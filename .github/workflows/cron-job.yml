@@ -7,6 +7,8 @@ on:
       - 'config.ini'
       - 'main.py'
       - 'radar.py'
+      - 'radar_history.py'
+      - 'data/radar-receipts/*.json'
       - 'oeffentlichevergabe.py'
       - 'optirent_filter.py'
       - 'test_*.py'
@@ -30,6 +32,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -49,7 +54,6 @@ jobs:
           git add docs/ data/radar-state.json data/radar-seen.json
           if ! git diff --cached --quiet; then
             git commit -m "Update OPTIRENT RSS"
-            git pull --rebase origin main
             git push
           fi
       - name: Publish and verify GitHub Pages

@@ -58,6 +58,8 @@ class RadarTests(unittest.TestCase):
     def test_ov_failure_publishes_service_with_stale_warning(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d);(p/'docs').mkdir();(p/'data').mkdir()
+            import radar_history
+            (p/radar_history.HISTORY).write_text(json.dumps(radar_history.initial()))
             (p/'docs/optirent-ausschreibungen.xml').write_bytes(b'old feed')
             (p/'config.ini').write_text('[source001]\\nurl="https://source.test/feed"\\n'.replace('\\n','\n'))
             original=initial_state();original['last_day']='2026-11-09'

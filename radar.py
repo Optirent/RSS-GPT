@@ -30,6 +30,7 @@ import feedparser
 from bs4 import BeautifulSoup
 from oeffentlichevergabe import BERLIN, NS, clean, txt, parse_notice, relevance
 from optirent_filter import canonical_key, keep_entry, offer_deadline, source_content
+import radar_history
 
 API='https://oeffentlichevergabe.de/api/notice-exports'
 PUBLIC='https://optirent.github.io/RSS-GPT/'
@@ -63,7 +64,8 @@ def ingest(state, xml, publication, root=None):
         state['superseded']=sorted(set(state['superseded']) | (refs-{nid}))
     # Retain an empty corrected record: disappearance of a keyword must remove the old entry.
     if entries or old:
-        state['notices'][nid]={'version':ver,'publication':publication,'procedure':proc,'kind':kind,'entries':entries}
+        state['notices'][nid]={'version':ver,'publication':publication,'procedure':proc,'kind':kind,'entries':entries,
+                               'corrects':sorted(refs-{nid})}
     if kind=='result' and proc:
         for result in root.findall('.//efac:LotResult',NS):
             lot=txt(result,'efac:TenderLot/cbc:ID')
@@ -306,6 +308,18 @@ def publish(state, rows, status, root, seen_state):
               'docs/radar-status.json':json.dumps(status,ensure_ascii=False,indent=2).encode(),
               'data/radar-state.json':json.dumps(state,ensure_ascii=False,separators=(',',':')).encode(),
               'data/radar-seen.json':json.dumps(seen_state,ensure_ascii=False,indent=2).encode()}
+    history_path=root/radar_history.HISTORY
+    if not history_path.exists():
+        raise ValueError('Persistent history missing; run radar_history.py migrate before publishing')
+    history=json.loads(history_path.read_text(encoding='utf-8'))
+    radar_history.validate(history)
+    for receipt_path in sorted((root/'data/radar-receipts').glob('*.json')):
+        radar_history.acknowledge(history,**json.loads(receipt_path.read_text(encoding='utf-8')))
+    feed=payloads['docs/optirent-ausschreibungen.xml']
+    radar_history.capture(history,radar_history.parse_feed(feed,state),status['updated_at'],
+                          'feed:'+hashlib.sha256(feed).hexdigest(),
+                          {'ov_status':status.get('ov_status'),'through':status.get('through')})
+    payloads.update(radar_history.payloads(history))
     # Render and validate everything before replacement. Workflow commits only on total success.
     with tempfile.TemporaryDirectory(dir=root) as staging:
         for i,(name,data) in enumerate(payloads.items()):
