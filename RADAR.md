@@ -106,3 +106,9 @@ Quelle: https://oeffentlichevergabe.de/documentation/swagger-ui/opendata/index.h
 Der tägliche Radar benötigt für die Sammlung und Einstufung keinen OpenAI-API-Key.
 Die ursprüngliche `main.py` bleibt als Legacy-Implementierung erhalten; der
 produktive Workflow verwendet ausschließlich `radar.py`.
+
+## Betriebsstatus am 25.11.2026
+
+Der isolierte Erstimport vom lokalen Rechner war erfolgreich (97 TED-Bekanntmachungen bis 24.11.; 115 bestehende offene Ereignisse und alle Quittungen erhalten). Im GitHub-Workflow lief die Suche, aber der Abruf von `772071-2026` lieferte wiederholt leeres XML, obwohl derselbe amtliche Link lokal lesbar war. Die Ursache ist nicht geklärt. Der Workflow weist TED deshalb als `stale` mit `ted_through: null` aus und übernimmt keine unvollständige TED-Menge. Die anderen Quellen werden weiterhin verarbeitet; der nächste Lauf wiederholt den Import. Die tägliche Aufgabe ist angewiesen, diesen Zustand ausdrücklich zu melden. Eine produktiv erfolgreiche TED-Erstübernahme ist noch nicht bestätigt.
+
+Ein alternativer amtlicher Paketabruf muss vor Einsatz gesondert implementiert und getestet werden. Diagnose und Beispiele: [GitHub-Lauf](https://github.com/Optirent/RSS-GPT/actions/runs/45584561820), [TED-Dokumentation zum XML-Paketabruf](https://ted.europa.eu/en/help/data-reuse).
