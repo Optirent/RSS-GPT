@@ -116,3 +116,27 @@ der Historie dokumentiert; ein nackter Neuaufbau bestätigt nur die feste Basis.
 - Die vollständige Historie wächst; reguläre Berichte lesen die kompakte
   Tagesdatei. Bei langfristigem Größenwachstum kann die Historie später mit
   unveränderten Ereignis-IDs archiviert/aufgeteilt werden.
+
+## Abgeschlossene Inbetriebnahme
+
+Implementierung: `d966d035062cb1a528641452b13b286c982c3856` auf `main`.
+Der vollständige GitHub-Lauf [45569499401](https://github.com/Optirent/RSS-GPT/actions/runs/45569499401)
+hat am 25.11.2026 alle 51 Tests, Quellenabruf, Datenspeicherung und die explizite
+GitHub-Pages-Verifikation erfolgreich abgeschlossen. Datencommit:
+`322a8514a05f9c0dfd3d7eec417c8188030a73ca`; Quellen vollständig bis 24.11.,
+124 RSS-Einträge. Alle 114 offenen Migrationsereignisse sind unverändert erhalten.
+Ein neu erfasster expliziter Berichtigungsverweis für Mainz ergänzt den Bestand
+auf 115 offene Ereignisse. Das ist kein zusätzlicher neuer RSS-Treffer.
+
+Die bestehende ChatGPT-Automation `6ae8879c8a748191acf204ba2ef41b12` wurde erst
+nach diesem erfolgreichen Lauf umgestellt. Der gespeicherte Prompt wurde erneut
+geöffnet und inhaltlich vollständig verglichen; täglich 08:00 Uhr und aktiver
+Status bleiben erhalten. Sie liest die kompakte Tagesdatei an einem fixierten
+Commit und verarbeitet offene Ereignisse sowie belegte frühere Zustellungen.
+Der erste reguläre Bericht nach der Umstellung und dessen spätere Quittierung
+sind zukünftige Betriebsschritte, keine bereits getestete Chat-Zustellung.
+
+Beobachtete Abrufgrenze: GitHub `fetch_file` lieferte für die vollständige rund
+1,5-MB-Historie eine leere Inhaltsantwort. Die kompakte Tagesdatei wurde vollständig
+über denselben Connector gelesen; die Historie wurde zusätzlich per Git geprüft.
+Der Automationsprompt berücksichtigt leere/abgeschnittene Antworten ausdrücklich.
