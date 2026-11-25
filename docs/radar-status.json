@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-11-25T10:21:22.562265+01:00",
-  "updated_at_display": "25.11.2026 10:21 CET",
+  "updated_at": "2026-11-25T10:29:16.790523+01:00",
+  "updated_at_display": "25.11.2026 10:29 CET",
   "through": "2026-11-24",
   "ov_target_through": "2026-11-24",
   "ov_status": "complete",
   "ov_error": null,
-  "ted_status": "stale",
-  "ted_error": "IncompleteTED: Invalid or empty TED XML for https://ted.europa.eu/en/notice/772071-2026/xml: no element found: line 1, column 0",
-  "ted_through": null,
-  "ted_imported": 0,
+  "ted_status": "complete",
+  "ted_error": null,
+  "ted_through": "2026-11-24",
+  "ted_imported": 97,
   "bootstrap_since": "2026-09-01",
-  "items": 124,
-  "new_items": 1,
+  "items": 137,
+  "new_items": 14,
   "new_passend": 0,
-  "new_pruefen": 1,
+  "new_pruefen": 14,
   "passend": 12,
-  "pruefen": 112,
+  "pruefen": 125,
   "cross_source_duplicates_merged": 17,
   "sources": [
     "service.bund.de",
@@ -54,7 +54,6 @@
   "limitations": [
     "Not a complete pre-September-2026 active inventory",
     "Uncertain cross-source duplicates remain separate",
-    "Not all withdrawal notices carry explicit lot outcomes",
-    "TED import is stale; verified watermark was preserved"
+    "Not all withdrawal notices carry explicit lot outcomes"
   ]
 }
