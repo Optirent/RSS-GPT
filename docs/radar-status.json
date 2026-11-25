@@ -1,32 +1,23 @@
 {
-  "updated_at": "2026-11-24T06:54:16.021524+01:00",
-  "updated_at_display": "24.11.2026 06:54 CET",
-  "through": "2026-11-23",
-  "ov_target_through": "2026-11-23",
+  "updated_at": "2026-11-25T06:55:47.608014+01:00",
+  "updated_at_display": "25.11.2026 06:55 CET",
+  "through": "2026-11-24",
+  "ov_target_through": "2026-11-24",
   "ov_status": "complete",
   "ov_error": null,
   "bootstrap_since": "2026-09-01",
-  "items": 128,
+  "items": 124,
   "new_items": 1,
   "new_passend": 0,
   "new_pruefen": 1,
   "passend": 12,
-  "pruefen": 116,
-  "cross_source_duplicates_merged": 16,
+  "pruefen": 112,
+  "cross_source_duplicates_merged": 17,
   "sources": [
     "service.bund.de",
     "öffentlichevergabe.de"
   ],
   "imports": [
-    {
-      "period": "2026-11-20",
-      "source_period": "2026-11-20",
-      "notices": 1060,
-      "sha256": [
-        "a599071ec75bf674167052736ce1be62935e3bf773ea9db9cd210a4ab23416f2",
-        "b9a89404b24335117cadc8229e0ae87d5d2804e2d0c30b9d53a558eb9a0c1d9f"
-      ]
-    },
     {
       "period": "2026-11-21",
       "source_period": "2026-11-21",
@@ -52,6 +43,15 @@
       "sha256": [
         "b0d7e60ec2b9d71cd7751eed908144d27f3660980a575d00ebf4298f2e12f5d9",
         "e0415a1a7b67e8def638deb06396276a078bcc21d5d8a3cce43b33b2f54ff4ee"
+      ]
+    },
+    {
+      "period": "2026-11-24",
+      "source_period": "2026-11-24",
+      "notices": 937,
+      "sha256": [
+        "b91804dd4cb1d5d95bbdb7f1683e1388accce6596b0b65d0b5a7df8414dd2f76",
+        "b787a4df3c6b8fc8224c833003dfa29c97bf53865c8f093d11e10b7000e76abd"
       ]
     }
   ],
