@@ -220,7 +220,7 @@ def delta(history):
     return dict(schema=1, day=day, snapshot=latest, daily_events=list(map(compact,daily)),
                 pending_events=list(map(compact,pending)), counts=dict(daily_events=len(daily),
                 pending_events=len(pending), captured_entities=len(history['records']),
-                new_rss_entries=len({e['after']['rss_guid'] for e in new}),
+                new_rss_entries=len({e['after']['rss_guid'] for e in new if e['after'].get('rss_present',True)}),
                 new_entities=len(new), identified_procedures_among_new=len(procedures),
                 new_with_unknown_procedure=sum(not e['after'].get('procedure_id') for e in new),
                 explicit_lot_ids_among_new=len({(e['after'].get('notice_id'),e['after']['lot_id'])

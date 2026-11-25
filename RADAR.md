@@ -1,5 +1,33 @@
 # OPTIRENT Ausschreibungsradar
 
+## TED als zusätzliche Quelle
+
+Die TED Search API wird für jeden Veröffentlichungstag ab 06.11.2026 und
+anschließend mit zwei Tagen Überlappung abgefragt. Die Suche kombiniert den
+Ausführungsort Deutschland, CPV 442111 einschließlich Untercodes und die 25
+bestehenden service.bund.de-Suchbegriffe. Trefferseiten werden vollständig
+eingelesen und zu jeder Bekanntmachung das Original-XML geprüft. Der TED-Stand
+wird nur fortgeschrieben, wenn alle Seiten und XML-Dokumente erfolgreich
+verarbeitet wurden; bei Fehlern bleibt der letzte Stand erhalten und
+`radar-status.json` weist `ted_status`, `ted_error` und `ted_through` aus.
+Fehlende Tage werden nachgeholt. Bei temporärer Begrenzung (HTTP 429) und
+Serverfehlern wiederholt der Abruf mit Wartezeit.
+
+Identische amtliche Bekanntmachungs-/Los-IDs werden mit vorhandenen Treffern
+zusammengeführt. Änderungen und explizite Berichtigungsreferenzen werden
+weiterhin als Ereignisse erfasst. Auch abgelaufene oder aus dem aktiven Feed
+ausgeschlossene TED-Treffer bleiben in der Historie als offene Meldungen
+erhalten. Mehrere unbestätigte Ereignisse bleiben bis zur belegten Quittung
+offen. Der aktive RSS-Feed bleibt unter derselben Adresse verfügbar.
+
+Die TED-Abdeckung beginnt am 06.11.2026; ältere offene Veröffentlichungen sowie
+Bekanntmachungen ohne Ausführungsort Deutschland oder ohne passenden Suchbegriff
+oder CPV-Code sind nicht vollständig erfasst. Die Freitextsuche von TED kann
+anders als die Wortsuche von service.bund.de indizieren; sie ist keine Garantie
+für vollständige Marktabdeckung. Zuschläge und Änderungen werden nach derselben
+Quellensuche gefunden, weshalb ausdrücklich eine Berichtigung ohne übereinstimmende
+Suchmerkmale entgehen kann.
+
 Seit 25.11.2026 ergänzen eine persistente Bekanntmachungs-/Los-Historie und eine
 Tagesdatei mit dauerhaft offenen Meldungen den RSS-Feed. Datenvertrag, Migration,
 Meldebestätigungen und Grenzen stehen in [HISTORY.md](HISTORY.md).

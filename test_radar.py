@@ -69,7 +69,7 @@ class RadarTests(unittest.TestCase):
             def service_update(state,urls,now,feed):
                 state['service'][canonical_key({'link':item['url']})]=item
             with patch('radar.refresh_ov',side_effect=IncompleteExportError('day export incomplete')):
-                with patch('radar.refresh_service',side_effect=service_update):
+                with patch('radar.refresh_service',side_effect=service_update), patch('radar.ted.refresh',return_value=0):
                     run(p)
             restored=json.loads((p/'data/radar-state.json').read_text())
             self.assertEqual(restored['last_day'],'2026-11-09')

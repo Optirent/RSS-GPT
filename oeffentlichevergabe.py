@@ -82,7 +82,7 @@ def relevance(title, description, kind):
         return 'Passend', 'Container-/Modulgebäude und Lieferung, Miete oder Errichtung im Titel.'
     return 'Prüfen', 'Suchbegriff oder CPV passt; konkrete Raumcontainerleistung muss geprüft werden.'
 
-def parse_notice(data, publication='', root=None):
+def parse_notice(data, publication='', root=None, matched_by_source=False):
     if root is None:
         root = ET.fromstring(data)
     nid, version = txt(root, 'cbc:ID'), txt(root, 'cbc:VersionID')
@@ -106,6 +106,8 @@ def parse_notice(data, publication='', root=None):
         description = txt(lp, 'cbc:Description') or txt(project, 'cbc:Description')
         codes = sorted(set(project_cpvs + [clean(e.text) for e in lot.findall('.//cbc:ItemClassificationCode', NS)]))
         groups = matching_groups(notice_text, codes)
+        if not groups and matched_by_source:
+            groups = ['TED-Suche']
         if not groups:
             continue
         process = lot.find('cac:TenderingProcess', NS)

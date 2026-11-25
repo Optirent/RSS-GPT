@@ -8,6 +8,7 @@ on:
       - 'main.py'
       - 'radar.py'
       - 'radar_history.py'
+      - 'ted.py'
       - 'data/radar-receipts/*.json'
       - 'oeffentlichevergabe.py'
       - 'optirent_filter.py'

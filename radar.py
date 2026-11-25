@@ -31,6 +31,7 @@ from bs4 import BeautifulSoup
 from oeffentlichevergabe import BERLIN, NS, clean, txt, parse_notice, relevance
 from optirent_filter import canonical_key, keep_entry, offer_deadline, source_content
 import radar_history
+import ted
 
 API='https://oeffentlichevergabe.de/api/notice-exports'
 PUBLIC='https://optirent.github.io/RSS-GPT/'
@@ -52,9 +53,9 @@ def request_bytes(url):
 def version_key(version, publication):
     return (int(version) if str(version).isdigit() else 0, publication)
 
-def ingest(state, xml, publication, root=None):
+def ingest(state, xml, publication, root=None, matched_by_source=False):
     if root is None:root=ET.fromstring(xml)
-    nid,ver,proc,kind,entries=parse_notice(xml,publication,root)
+    nid,ver,proc,kind,entries=parse_notice(xml,publication,root,matched_by_source=matched_by_source)
     if not nid: raise ValueError('Notice without identifier')
     old=state['notices'].get(nid)
     if old and version_key(old['version'],old['publication']) > version_key(ver,publication):
@@ -295,14 +296,20 @@ def page_html(rows, status, new_guids=()):
              'öffentlichevergabe.de ist nur bis zum '+e(str(status['through']))
              +' vollständig importiert. service.bund.de wurde neu geprüft.</p>'
              if status.get('ov_status')=='stale' else '')
+    if status.get('ted_status')=='stale':
+        warning += ('<p role="alert"><strong>Achtung:</strong> TED konnte nicht vollständig '
+                    'abgerufen werden. Letzter vollständiger Stand: '+e(str(status.get('ted_through') or 'unbekannt'))+'.</p>')
     new_guids=set(new_guids)
     cards=''.join(f'<article data-rating="{e(r["rating"])}" data-new="{int(r["guid"] in new_guids)}"{" hidden" if r["guid"] not in new_guids else ""}><small>{e(r["rating"])} · {e(", ".join(r["sources"]))}</small><h2><a href="{e(r["url"],quote=True)}">{e(r["title"])}</a></h2><p><b>{e(r["buyer"])}</b> · {e(r["location"])}</p><p><b>{e(r["deadline_kind"] or "Frist")}: {e(deadline_label(r))}</b></p><details><summary>Details und Quellen</summary>{description_html(r)}</details></article>' for r in rows)
     return ('''<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OPTIRENT Ausschreibungsradar</title><style>body{font:16px system-ui;background:#f1f5f7;color:#173442;margin:0}main{max-width:1100px;margin:auto;padding:28px}a{color:#00607c}article{padding:22px;background:white;border:1px solid #d1dfe6;border-radius:9px;margin:16px 0}h2{font-size:21px}input,select{font:inherit;padding:10px;margin:5px;border:1px solid #9badb4;border-radius:5px}input{width:50%;min-width:220px}small{color:#4b6875}details{overflow-wrap:anywhere}[hidden]{display:none}</style><main><h1>OPTIRENT Ausschreibungsradar</h1>'''+f'<p>Stand: {e(status["updated_at_display"])} · <strong>{status["new_items"]} neue</strong> seit der letzten Tagesprüfung · {len(rows)} im Gesamtbestand</p><p>öffentlichevergabe.de: Veröffentlichungen bis {e(status["through"])}. Neue Veröffentlichungen erscheinen im Export am Folgetag. Automatische Vorauswahl; Angaben in den Originalunterlagen prüfen.</p>'+warning+'''<p><a href="optirent-ausschreibungen.xml">RSS-Feed abonnieren</a> · <a href="radar-status.json">Abrufstatus</a></p><label for="scope">Ansicht</label><select id="scope" aria-label="Anzeigebereich"><option value="new">Nur neue Ausschreibungen</option><option value="all">Alle aktiven Ausschreibungen</option></select><input id="search" aria-label="Treffer durchsuchen" placeholder="Titel, Ort oder Vergabestelle"><select id="rating" aria-label="Einstufung"><option value="">Alle Chancen</option><option>Passend</option><option>Prüfen</option></select><p id="count"></p>'''+cards+'''<footer>„Prüfen“ umfasst unklare Leistungen sowie Vorinformationen oder Einträge ohne gesicherte Frist. Ältere offene Bekanntmachungen vor dem erstmaligen Import können fehlen.</footer></main><script>const q=document.querySelector('#search'),s=document.querySelector('#rating'),scope=document.querySelector('#scope');function apply(){let n=0;for(const a of document.querySelectorAll('article')){a.hidden=!!((scope.value==='new'&&a.dataset.new!=='1')||(s.value&&a.dataset.rating!==s.value)||(q.value&&!a.textContent.toLocaleLowerCase('de').includes(q.value.toLocaleLowerCase('de'))));if(!a.hidden)n++}document.querySelector('#count').textContent=n?n+' Treffer':'Keine neuen Einträge für die gewählte Ansicht.'}q.addEventListener('input',apply);s.addEventListener('change',apply);scope.addEventListener('change',apply);apply();</script></html>''').encode('utf-8')
 
-def publish(state, rows, status, root, seen_state):
-    source_warning=('ACHTUNG: öffentlichevergabe.de ist nur bis zum '+str(status['through'])
-                    +' vollständig importiert; service.bund.de ist aktuell.'
-                    if status.get('ov_status')=='stale' else '')
+def publish(state, rows, status, root, seen_state, history_rows=None):
+    warnings=[]
+    if status.get('ov_status')=='stale':
+        warnings.append('öffentlichevergabe.de ist nur bis '+str(status['through'])+' vollständig importiert')
+    if status.get('ted_status')=='stale':
+        warnings.append('TED ist nur bis '+str(status.get('ted_through') or 'unbekannt')+' vollständig importiert')
+    source_warning=('ACHTUNG: '+'. '.join(warnings)+'.' if warnings else '')
     payloads={'docs/optirent-ausschreibungen.xml':rss_bytes(rows,dt.datetime.fromisoformat(status['updated_at']),source_warning),
               'docs/index.html':page_html(rows,status,seen_state['new_guids']),
               'docs/radar-status.json':json.dumps(status,ensure_ascii=False,indent=2).encode(),
@@ -316,9 +323,14 @@ def publish(state, rows, status, root, seen_state):
     for receipt_path in sorted((root/'data/radar-receipts').glob('*.json')):
         radar_history.acknowledge(history,**json.loads(receipt_path.read_text(encoding='utf-8')))
     feed=payloads['docs/optirent-ausschreibungen.xml']
-    radar_history.capture(history,radar_history.parse_feed(feed,state),status['updated_at'],
+    observed=radar_history.parse_feed(feed,state)
+    if history_rows:
+        current={r['key'] for r in observed}
+        observed.extend(r for r in history_rows if r['key'] not in current)
+    radar_history.capture(history,observed,status['updated_at'],
                           'feed:'+hashlib.sha256(feed).hexdigest(),
-                          {'ov_status':status.get('ov_status'),'through':status.get('through')})
+                          {'ov_status':status.get('ov_status'),'through':status.get('through'),
+                           'ted_status':status.get('ted_status'),'ted_through':status.get('ted_through')})
     payloads.update(radar_history.payloads(history))
     # Render and validate everything before replacement. Workflow commits only on total success.
     with tempfile.TemporaryDirectory(dir=root) as staging:
@@ -351,6 +363,36 @@ def run(root=Path('.'), bootstrap_cache=None):
     # If service.bund.de also fails, publish nothing.
     refresh_service(state,urls,now,root/'docs/optirent-ausschreibungen.xml')
     rows,merged=merge_rows(ov_rows(state,now),state['service'].values(),now)
+    ted_error=None; ted_count=0
+    try:
+        ted_count=ted.refresh(state,through,ted.terms_from_urls(urls),ingest,initial_state)
+    except (ted.IncompleteTED, URLError, TimeoutError, ET.ParseError, KeyError, ValueError) as exc:
+        ted_error=f'{type(exc).__name__}: {exc}'
+        print(f'WARNUNG: TED unvollständig: {ted_error}; letzter Stand bleibt erhalten.',flush=True)
+    ted_state=(state.get('ted') or {}).get('state',initial_state())
+    ted_rows=ov_rows(ted_state,now)
+    by_id={(r.get('notice_id','').casefold(),r.get('lot_id','').upper()):r for r in rows if r.get('notice_id')}
+    for r in ted_rows:
+        key=(r['notice_id'].casefold(),r['lot_id'].upper())
+        link=r.get('ted_url')
+        if not link: continue
+        target=by_id.get(key)
+        if target:
+            if link not in target['links']:target['links'].append(link)
+            if 'TED' not in target['sources']:target['sources'].append('TED')
+        elif r['status'] in ACTIVE and r['rating']!='Nicht passend':
+            item=dict(r,source='TED',url=link,sources=['TED'],links=[link],guid='ov:'+r['notice_id']+':'+r['lot_id'])
+            rows.append(item);by_id[key]=item
+    # Capture TED notices even when already expired or excluded from the active feed.
+    extras=[]
+    for r in ted_rows:
+        if r['kind'] not in ('competition','planning','consultation') or not r.get('ted_url'): continue
+        item=dict(r,source='TED',url=r['ted_url'],sources=['TED'],links=[r['ted_url']],guid='ov:'+r['notice_id']+':'+r['lot_id'])
+        parsed=radar_history.parse_feed(rss_bytes([item],now),ted_state)[0]
+        parsed['status']='ted_only'
+        parsed['rss_present']=False
+        parsed['source_status']=r['status']
+        extras.append(parsed)
     seen_path=root/'data/radar-seen.json'
     if seen_path.exists():
         seen_state=json.loads(seen_path.read_text(encoding='utf-8'))
@@ -363,19 +405,23 @@ def run(root=Path('.'), bootstrap_cache=None):
             'through':state.get('last_day') or 'nicht verfügbar',
             'ov_target_through':through.isoformat(),'ov_status':'stale' if ov_error else 'complete',
             'ov_error':ov_error,
+            'ted_status':'stale' if ted_error else 'complete',
+            'ted_error':ted_error,'ted_through':(state.get('ted') or {}).get('last_day'),
+            'ted_imported':ted_count,
             'bootstrap_since':'2026-09-01','items':len(rows),
             'new_items':sum(r['guid'] in today_new for r in rows),
             'new_passend':sum(r['guid'] in today_new and r['rating']=='Passend' for r in rows),
             'new_pruefen':sum(r['guid'] in today_new and r['rating']=='Prüfen' for r in rows),
             'passend':sum(r['rating']=='Passend' for r in rows),
             'pruefen':sum(r['rating']=='Prüfen' for r in rows),
-            'cross_source_duplicates_merged':merged,'sources':['service.bund.de','öffentlichevergabe.de'],
+            'cross_source_duplicates_merged':merged,'sources':['service.bund.de','öffentlichevergabe.de','TED'],
             'imports':imports,
             'limitations':['Not a complete pre-September-2026 active inventory',
                            'Uncertain cross-source duplicates remain separate',
                            'Not all withdrawal notices carry explicit lot outcomes']
-                           +(['öffentlichevergabe.de import is stale; verified watermark was preserved'] if ov_error else [])}
-    publish(state,rows,status,root,seen_state)
+                           +(['öffentlichevergabe.de import is stale; verified watermark was preserved'] if ov_error else [])
+                           +(['TED import is stale; verified watermark was preserved'] if ted_error else [])}
+    publish(state,rows,status,root,seen_state,extras)
     print(json.dumps(status,ensure_ascii=False,indent=2))
 
 if __name__=='__main__':
