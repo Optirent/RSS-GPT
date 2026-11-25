@@ -1,10 +1,14 @@
 {
-  "updated_at": "2026-11-25T08:36:57.428445+01:00",
-  "updated_at_display": "25.11.2026 08:36 CET",
+  "updated_at": "2026-11-25T10:19:28.988151+01:00",
+  "updated_at_display": "25.11.2026 10:19 CET",
   "through": "2026-11-24",
   "ov_target_through": "2026-11-24",
   "ov_status": "complete",
   "ov_error": null,
+  "ted_status": "stale",
+  "ted_error": "ParseError: no element found: line 1, column 0",
+  "ted_through": null,
+  "ted_imported": 0,
   "bootstrap_since": "2026-09-01",
   "items": 124,
   "new_items": 1,
@@ -15,7 +19,8 @@
   "cross_source_duplicates_merged": 17,
   "sources": [
     "service.bund.de",
-    "öffentlichevergabe.de"
+    "öffentlichevergabe.de",
+    "TED"
   ],
   "imports": [
     {
@@ -49,6 +54,7 @@
   "limitations": [
     "Not a complete pre-September-2026 active inventory",
     "Uncertain cross-source duplicates remain separate",
-    "Not all withdrawal notices carry explicit lot outcomes"
+    "Not all withdrawal notices carry explicit lot outcomes",
+    "TED import is stale; verified watermark was preserved"
   ]
 }
