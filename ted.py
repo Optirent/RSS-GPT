@@ -2,7 +2,9 @@
 import copy
 import datetime as dt
 import json
+import io
 import re
+import tarfile
 import time
 from urllib.parse import parse_qs, urlsplit
 from urllib.request import Request, urlopen
@@ -67,7 +69,7 @@ def fetch_xml(url):
 
 def search_day(day, terms, post=post_json):
     request = dict(query=query_for(day,terms), fields=['publication-number','publication-date',
-                    'notice-identifier','notice-type'], scope='ALL', limit=250,
+                    'notice-identifier','notice-type','ojs-number'], scope='ALL', limit=250,
                    paginationMode='ITERATION')
     output=[]; tokens=set(); expected=None
     while True:
@@ -91,6 +93,34 @@ def search_day(day, terms, post=post_json):
     return output
 
 
+def package_xml(notice, cache):
+    """Read one exact notice from the official daily archive, without extraction."""
+    edition=notice.get('ojs-number','')
+    number=notice.get('publication-number','')
+    match=re.fullmatch(r'(\d{1,5})/(\d{4})', edition)
+    pub=re.fullmatch(r'(\d{1,8})-(\d{4})', number)
+    if not match or not pub or match.group(2)!=pub.group(2):
+        raise IncompleteTED('Missing or invalid TED edition/publication number')
+    key=match.group(2)+match.group(1).zfill(5)
+    if key not in cache:
+        url='https://ted.europa.eu/packages/daily/'+key
+        body=request_with_retry(Request(url,headers={'User-Agent':'OPTIRENT-Ausschreibungsradar/1.0'}))
+        if not body or len(body)>150_000_000:
+            raise IncompleteTED('TED daily package empty or too large: '+key)
+        cache[key]=body
+    filename=pub.group(1).zfill(8)+'_'+pub.group(2)+'.xml'
+    try:
+        with tarfile.open(fileobj=io.BytesIO(cache[key]),mode='r:gz') as archive:
+            matches=[m for m in archive.getmembers() if m.isfile() and m.name.rsplit('/',1)[-1]==filename]
+            if len(matches)!=1 or matches[0].size>20_000_000:
+                raise IncompleteTED('Missing, duplicate or oversized TED XML in daily package: '+number)
+            data=archive.extractfile(matches[0]).read()
+            ET.fromstring(data)
+            return data
+    except (tarfile.TarError,EOFError,OSError,ET.ParseError) as exc:
+        raise IncompleteTED('Invalid TED daily package or XML: '+key) from exc
+
+
 def refresh(state, through, terms, ingest, initial_state, post=post_json, fetch=fetch_xml,
             start=dt.date(2026,11,6)):
     candidate=copy.deepcopy(state.get('ted') or {'last_day':None,'state':initial_state()})
@@ -102,12 +132,21 @@ def refresh(state, through, terms, ingest, initial_state, post=post_json, fetch=
     for offset in range((through-first).days+1):
         day=first+dt.timedelta(days=offset)
         notices=search_day(day,terms,post)
+        package_cache={}; use_package=False
         for notice in notices:
             nid=notice.get('notice-identifier'); pub=notice.get('publication-date','')
             xml_url=notice.get('links',{}).get('xml',{}).get('MUL')
             if not nid or not xml_url or pub[:10] != day.isoformat():
                 raise IncompleteTED('TED metadata or publication date missing')
-            data=fetch(xml_url); root=ET.fromstring(data)
+            if use_package:
+                data=package_xml(notice,package_cache)
+            else:
+                try:
+                    data=fetch(xml_url); ET.fromstring(data)
+                except IncompleteTED:
+                    data=package_xml(notice,package_cache)
+                    use_package=True
+            root=ET.fromstring(data)
             rawid=root.findtext('{urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2}ID')
             if not rawid or rawid.casefold()!=nid.casefold():
                 raise IncompleteTED('TED XML identifier does not match search result')

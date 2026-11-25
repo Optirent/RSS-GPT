@@ -1,5 +1,7 @@
 import copy
+import io
 import datetime as dt
+import tarfile
 import unittest
 from unittest.mock import patch
 
@@ -79,6 +81,26 @@ class TEDTests(unittest.TestCase):
         with patch('ted.request_with_retry',return_value=b''), patch('ted.time.sleep'):
             with self.assertRaisesRegex(ted.IncompleteTED,'123-2026'):
                 ted.fetch_xml('https://ted.europa.eu/en/notice/123-2026/xml')
+
+    def test_official_daily_package_exact_lookup_and_cache(self):
+        stream=io.BytesIO()
+        with tarfile.open(fileobj=stream,mode='w:gz') as archive:
+            data=b'<notice/>';info=tarfile.TarInfo('20261106_216/00772071_2026.xml');info.size=len(data)
+            archive.addfile(info,io.BytesIO(data))
+        cache={};notice={'publication-number':'772071-2026','ojs-number':'216/2026'}
+        with patch('ted.request_with_retry',return_value=stream.getvalue()) as get:
+            self.assertEqual(ted.package_xml(notice,cache),b'<notice/>')
+            self.assertEqual(ted.package_xml(notice,cache),b'<notice/>')
+            self.assertEqual(get.call_count,1)
+
+    def test_wrong_edition_or_missing_notice_rejected(self):
+        with self.assertRaises(ted.IncompleteTED):
+            ted.package_xml({'publication-number':'772071-2026','ojs-number':'216/2025'}, {})
+        stream=io.BytesIO()
+        with tarfile.open(fileobj=stream,mode='w:gz'):pass
+        with patch('ted.request_with_retry',return_value=stream.getvalue()):
+            with self.assertRaises(ted.IncompleteTED):
+                ted.package_xml({'publication-number':'772071-2026','ojs-number':'216/2026'}, {})
 
 
 if __name__ == '__main__': unittest.main()
