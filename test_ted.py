@@ -70,5 +70,15 @@ class TEDTests(unittest.TestCase):
     def test_untrusted_xml_link_rejected(self):
         with self.assertRaises(ted.IncompleteTED):ted.fetch_xml('https://evil.test/a.xml')
 
+    def test_empty_xml_is_retried_and_validated(self):
+        with patch('ted.request_with_retry',side_effect=[b'',b'<notice/>']) as get, patch('ted.time.sleep'):
+            self.assertEqual(ted.fetch_xml('https://ted.europa.eu/en/notice/123-2026/xml'),b'<notice/>')
+            self.assertEqual(get.call_count,2)
+
+    def test_repeated_invalid_xml_explains_notice(self):
+        with patch('ted.request_with_retry',return_value=b''), patch('ted.time.sleep'):
+            with self.assertRaisesRegex(ted.IncompleteTED,'123-2026'):
+                ted.fetch_xml('https://ted.europa.eu/en/notice/123-2026/xml')
+
 
 if __name__ == '__main__': unittest.main()

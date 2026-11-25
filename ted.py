@@ -54,7 +54,15 @@ def fetch_xml(url):
     parts = urlsplit(url)
     if parts.scheme != 'https' or parts.hostname != 'ted.europa.eu' or not re.fullmatch(r'/en/notice/\d+-\d{4}/xml', parts.path):
         raise IncompleteTED('Unexpected TED XML URL')
-    return request_with_retry(Request(url, headers={'User-Agent':'OPTIRENT-Ausschreibungsradar/1.0'}))
+    for attempt in range(4):
+        body=request_with_retry(Request(url, headers={'User-Agent':'OPTIRENT-Ausschreibungsradar/1.0'}))
+        try:
+            ET.fromstring(body)
+            return body
+        except ET.ParseError as exc:
+            if attempt==3:
+                raise IncompleteTED(f'Invalid or empty TED XML for {url}: {exc}') from exc
+            time.sleep(3*(attempt+1))
 
 
 def search_day(day, terms, post=post_json):
