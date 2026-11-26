@@ -330,7 +330,8 @@ def publish(state, rows, status, root, seen_state, history_rows=None):
     radar_history.capture(history,observed,status['updated_at'],
                           'feed:'+hashlib.sha256(feed).hexdigest(),
                           {'ov_status':status.get('ov_status'),'through':status.get('through'),
-                           'ted_status':status.get('ted_status'),'ted_through':status.get('ted_through')})
+                           'ted_status':status.get('ted_status'),'ted_through':status.get('ted_through'),
+                           'rss_entries':len(rows)})
     payloads.update(radar_history.payloads(history))
     # Render and validate everything before replacement. Workflow commits only on total success.
     with tempfile.TemporaryDirectory(dir=root) as staging:

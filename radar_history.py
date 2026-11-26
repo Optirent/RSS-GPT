@@ -84,6 +84,8 @@ def parse_feed(data, state=None):
         raise ValueError('Ambiguous duplicate normalized identities')
     for row in rows:
         notice = (state or {}).get('notices', {}).get(row['notice_id'], {})
+        if not notice:
+            notice = (state or {}).get('ted', {}).get('state', {}).get('notices', {}).get(row['notice_id'], {})
         entries = [e for e in notice.get('entries', [])
                    if clean(e.get('lot_id')).upper() == (row['lot_id'] or '')]
         if len(entries) == 1:

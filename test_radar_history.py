@@ -19,6 +19,15 @@ def sample(**changes):
 
 
 class HistoryTests(unittest.TestCase):
+    def test_ted_enrichment_retains_explicit_correction(self):
+        import radar
+        from test_radar import row, NOW
+        r=dict(row(), guid='ov:N1:LOT-0001', sources=['TED'], links=['https://ted.europa.eu/de/notice/-/detail/1-2026'])
+        entry=dict(notice_id='N1',lot_id='LOT-0001',procedure_id='P',version='01',deadline=r['deadline'],buyer=r['buyer'],kind='competition')
+        state={'ted':{'state':{'notices':{'n1':{'entries':[entry],'corrects':['old-id']}}}}}
+        parsed=h.parse_feed(radar.rss_bytes([r],NOW),state)
+        self.assertEqual(parsed[0]['corrects'],['old-id'])
+
     def setUp(self):
         self.h = h.initial()
 
