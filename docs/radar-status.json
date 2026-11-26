@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-26T10:59:36.123855+01:00",
-  "updated_at_display": "26.11.2026 10:59 CET",
+  "updated_at": "2026-11-26T11:16:11.176144+01:00",
+  "updated_at_display": "26.11.2026 11:16 CET",
   "through": "2026-11-25",
   "ov_target_through": "2026-11-25",
   "ov_status": "complete",
@@ -23,15 +23,6 @@
     "TED"
   ],
   "imports": [
-    {
-      "period": "2026-11-22",
-      "source_period": "2026-11-22",
-      "notices": 560,
-      "sha256": [
-        "10acc0ef7cb31351da04d86305933de1785702c57d60f356d281dd61becb9c57",
-        "dafff7ba13ec136eba1889db24c1dc849e9a212ec3013ec3b14a7c71caababfc"
-      ]
-    },
     {
       "period": "2026-11-23",
       "source_period": "2026-11-23",
